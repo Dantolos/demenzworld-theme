@@ -1,0 +1,47 @@
+<?php
+add_action( 'init', function() {
+	register_post_type( 'test', array(
+	'labels' => array(
+		'name' => 'Tests',
+		'singular_name' => 'test',
+		'menu_name' => 'Test',
+		'all_items' => 'All Test',
+		'edit_item' => 'Edit test',
+		'view_item' => 'View test',
+		'view_items' => 'View Test',
+		'add_new_item' => 'Add New test',
+		'add_new' => 'Add New test',
+		'new_item' => 'New test',
+		'parent_item_colon' => 'Parent test:',
+		'search_items' => 'Search Test',
+		'not_found' => 'No test found',
+		'not_found_in_trash' => 'No test found in Trash',
+		'archives' => 'test Archives',
+		'attributes' => 'test Attributes',
+		'insert_into_item' => 'Insert into test',
+		'uploaded_to_this_item' => 'Uploaded to this test',
+		'filter_items_list' => 'Filter test list',
+		'filter_by_date' => 'Filter test by date',
+		'items_list_navigation' => 'Test list navigation',
+		'items_list' => 'Test list',
+		'item_published' => 'test published.',
+		'item_published_privately' => 'test published privately.',
+		'item_reverted_to_draft' => 'test reverted to draft.',
+		'item_scheduled' => 'test scheduled.',
+		'item_updated' => 'test updated.',
+		'item_link' => 'test Link',
+		'item_link_description' => 'A link to a test.',
+	),
+	'public' => true,
+	'show_in_rest' => true,
+	'menu_icon' => 'dashicons-admin-post',
+	'supports' => array(
+		0 => 'title',
+		1 => 'editor',
+		2 => 'thumbnail',
+		3 => 'custom-fields',
+	),
+	'delete_with_user' => false,
+) );
+} );
+
