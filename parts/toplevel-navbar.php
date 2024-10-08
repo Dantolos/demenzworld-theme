@@ -44,15 +44,15 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
                          $render_output .= '</div>';
 
                          $render_output .= '<div class="dw__navbar_buttons_container">'; 
-                              $render_output .= $this->navbar_donation_trigger(); 
+                              //$render_output .= $this->navbar_donation_trigger(); 
                               $render_output .= $this->navbar_chatbot_trigger();
                               $render_output .= $this->navbar_burger_trigger();
                          $render_output .= '</div>';
                     $render_output .= '</nav>';
                
                
+                    //$render_output .= $this->navbar_donation_lightbox();
                     $render_output .= $this->navbar_chatbot_lightbox();
-                    $render_output .= $this->navbar_donation_lightbox();
                     $render_output .= $this->navbar_burger_lightbox();
                     
                $render_output .= '</div>';
