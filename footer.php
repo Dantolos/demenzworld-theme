@@ -20,11 +20,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 			</div>			
 			<div class="dw__footer_right">
-				<p><a href="">Team</a></p>
-				<p><a href="">Autoren</a></p>
-				<p><a href="">Über uns</a></p>
-				<p><a href="http://localhost:10038/datenschutzrichtlinien/">Datenschutzrichtlinien</a></p>
-				<p><a href="http://localhost:10038/impressum/">Impressum</a></p>
+				<?php 
+				$footerNavigation = get_field('footer_navigation', 'options') ?: false; 
+				if($footerNavigation){
+					foreach( $footerNavigation as $footer_nav_item ){
+						$footer_nav_link = $footer_nav_item['link']['url'] ?: '#';
+						echo '<p><a href="' . $footer_nav_link . '" >' . $footer_nav_item['title'].'</a></p>';
+					}
+				}
+				?>
 			</div>			
 		</div>
 	</section>	

@@ -149,6 +149,44 @@
 	-moz-box-shadow: -28px 30px 147px 6px rgba(18, 9, 36, 0.4);
 }
 
+.dw__donation_lightbox {
+	display: flex;
+	flex-direction: column;
+}
+.dw__donation_lightbox img {
+	width: 60%;
+	max-height: 40%;
+}
+.dw__donation_lightbox h3 {
+	font-size: 2.5em;
+}
+
+.dw__donation_button_primary,
+.dw__donation_button_secondary {
+	padding: 15px 35px;
+	border: none;
+	border-radius: 20px;
+	background-color: #170056;
+	color: white;
+	font-size: 1.2em;
+	font-family: Herbit;
+	margin: 5px;
+	transition: all 200ms ease-in-out;
+}
+.dw__donation_button_primary:hover,
+.dw__donation_button_secondary:hover {
+	background-color: #db007e;
+	color: white;
+	transform: scale(1.1);
+	cursor: pointer;
+}
+.dw__donation_button_primary {
+}
+.dw__donation_button_secondary {
+	color: #170056;
+	background-color: #d5ceeb;
+}
+
 /*----CHATBOT LIGHTBOX----*/
 .dw__chatbot_lightbox_container {
 	z-index: 10000;
@@ -193,7 +231,8 @@
 	pointer-events: all;
 	opacity: 1;
 }
-.dw__active_lightbox .dw__chatbot_lightbox {
+.dw__active_lightbox .dw__chatbot_lightbox,
+.dw__active_lightbox .dw__donation_lightbox {
 	transform: scale(1);
 }
 

@@ -97,7 +97,7 @@ h2 {
 	/* background-color: #2c2c2c; */
 }
 .dw__section_dark_shape_divider {
-	height: 100px;
+	height: 150px;
 	background-size: 105% auto;
 	background-repeat: no-repeat;
 }
@@ -302,7 +302,7 @@ h2 {
 .dw__section_supporter {
 }
 .dw__section_white_shape_divider {
-	height: 80px;
+	height: 150px;
 
 	background-size: 105% auto;
 	background-repeat: no-repeat;
@@ -362,7 +362,7 @@ h2 {
 }
 
 .mauticform-page-wrapper h5 {
-	font-size: 0.6em;
+	font-size: 0.9em;
 	font-family: Source Sans Pro;
 	font-weight: 300;
 	margin-bottom: 10px;
@@ -419,6 +419,20 @@ div[data-validate="land"],
 .mauticform-errormsg {
 	font-size: 0.8em;
 }
+#mauticform_input_dwnewsletteranmeldung_annahme_der_agbs_und_date {
+	margin-bottom: 10px;
+}
+#mauticform_input_dwnewsletteranmeldung_annahme_der_agbs_und_date h5 {
+	display: none;
+	margin-top: 0;
+}
+#mauticform_input_dwnewsletteranmeldung_annahme_der_agbs_und_date h5 strong {
+	display: none;
+}
+
+.visible_accordeon {
+	display: block !important;
+}
 
 .dw__supporter_grid {
 	display: flex;
@@ -446,7 +460,7 @@ div[data-validate="land"],
 /* FOOTER */
 
 .dw__section_pink_shape_divider {
-	height: 100px;
+	height: 150px;
 	background-size: 105% auto;
 	background-repeat: no-repeat;
 	background-color: white;

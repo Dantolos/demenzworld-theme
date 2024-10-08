@@ -33,3 +33,24 @@ window.addEventListener("scroll", () => {
 		boxBackgroundParallax(Box, getScrollFactor(Box));
 	});
 });
+
+window.onload = function () {
+	const mauticCarousel = document.querySelector(
+		"#mauticform_input_dwnewsletteranmeldung_annahme_der_agbs_und_date"
+	);
+
+	// Füge das <h3> Element als letztes Kind hinzu
+	mauticCarousel.insertAdjacentHTML(
+		"afterbegin",
+		'<h3 onclick="mauticCarouselOpen()" style="margin-bottom:0; cursor:pointer;">📌 Wie verarbeiten wir Ihre Daten?</h3>'
+	);
+};
+function mauticCarouselOpen() {
+	const mauticCarousel = document.querySelector(
+		"#mauticform_input_dwnewsletteranmeldung_annahme_der_agbs_und_date"
+	);
+	const contentBlocks = mauticCarousel.querySelectorAll("h5");
+	contentBlocks.forEach((content) => {
+		content.classList.toggle("visible_accordeon");
+	});
+}

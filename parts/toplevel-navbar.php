@@ -10,6 +10,8 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
           public $alt_logo;
           public $icon;
           public $navigation;
+          public $donation_link_goenner;
+          public $donation_link_spende;
 
           public $style_sheet;
           private $js_script;
@@ -27,6 +29,9 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
  
                $this->style_sheet = $this->get_style();
                $this->js_script = $this->get_script(); 
+
+               $this->donation_link_goenner = get_field('donation_link_goenner', 'options') ?: '#';
+               $this->donation_link_spende = get_field('donation_link_spende', 'options') ?: '#';
           }
 
         
@@ -44,14 +49,14 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
                          $render_output .= '</div>';
 
                          $render_output .= '<div class="dw__navbar_buttons_container">'; 
-                              //$render_output .= $this->navbar_donation_trigger(); 
+                              $render_output .= $this->navbar_donation_trigger(); 
                               $render_output .= $this->navbar_chatbot_trigger();
                               $render_output .= $this->navbar_burger_trigger();
                          $render_output .= '</div>';
                     $render_output .= '</nav>';
                
                
-                    //$render_output .= $this->navbar_donation_lightbox();
+                    $render_output .= $this->navbar_donation_lightbox();
                     $render_output .= $this->navbar_chatbot_lightbox();
                     $render_output .= $this->navbar_burger_lightbox();
                     
@@ -119,19 +124,14 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
                $navbar_donation_lightbox = '';
                $navbar_donation_lightbox .= '<div class="dw__lightbox_container dw__donation_lightbox_container">';
                     $navbar_donation_lightbox .= '<div class="dw__donation_lightbox">';
-                    $navbar_donation_lightbox .= '<div id=“rnw-paylink-button-yccjs”></div>';
-                    $navbar_donation_lightbox .= '<script type=“module”>';
-                    $navbar_donation_lightbox .= 'import {PaylinkButton} from “https://unpkg.com/@raisenow/paylink-button@2/dist/PaylinkButton.js”';
-                    $navbar_donation_lightbox .= 'PaylinkButton.render(“#rnw-paylink-button-yccjs”, {';
-                    $navbar_donation_lightbox .= '“solution-id”: “yccjs”,';
-                    $navbar_donation_lightbox .= '“size”: “large”,';
-                    $navbar_donation_lightbox .= '“width”: “dynamic”,';
-                    $navbar_donation_lightbox .= '“icon”: “heart”,';
-                    $navbar_donation_lightbox .= '“label”: “Jetzt spenden”,';
-                    $navbar_donation_lightbox .= '“border-radius”: “8px”,';
-                    $navbar_donation_lightbox .='“background-color”: “#170056",';
-                    $navbar_donation_lightbox .='})';
-                    $navbar_donation_lightbox .='</script>';
+                         $navbar_donation_lightbox .= '<img src="'.get_stylesheet_directory_uri().'/assets/images/elements/donation.svg" alt="donation"/>';
+                         $navbar_donation_lightbox .= '<h3>Unterstütze uns</h3>';
+                         $navbar_donation_lightbox .= '<a href="'.$this->donation_link_goenner.'" target="_blank">';
+                         $navbar_donation_lightbox .= '<button class="dw__donation_button_primary">Werde Gänner</button>';
+                         $navbar_donation_lightbox .= '</a>';
+                         $navbar_donation_lightbox .= '<a href="'.$this->donation_link_spende.'" target="_blank">';
+                         $navbar_donation_lightbox .= '<button class="dw__donation_button_secondary">einmalige Spende</button>';
+                         $navbar_donation_lightbox .= '</a>';
                     $navbar_donation_lightbox .= '</div>';
                $navbar_donation_lightbox .= '</div>';
                return $navbar_donation_lightbox;
