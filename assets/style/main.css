@@ -5,7 +5,7 @@ h2 {
 	font-size: 3rem;
 	line-height: 3.1rem;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 980px) {
 	h2 {
 		font-size: 2rem;
 		line-height: 2.1rem;
@@ -20,7 +20,7 @@ h2 {
 	position: relative;
 	justify-content: center;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 980px) {
 	.dw__page_wrapper {
 		top: 0px;
 	}
@@ -204,6 +204,9 @@ h2 {
 	color: white;
 	padding: 5px 20px;
 	border-radius: 20px;
+	transition: all 200ms ease-in-out;
+}
+.dw__grid_box_hidden a:hover {
 }
 
 .dw__grid_box_hover_content {
@@ -267,6 +270,18 @@ h2 {
 }
 .dw__grid_box:hover .dw__grid_box_hidden > h3 {
 	transform: translateY(0px);
+}
+@media screen and (max-width: 1200px) {
+	.dw__grid_box {
+		height: 220px;
+	}
+	.dw__grid_box_hidden > h3 {
+		font-size: 2rem;
+	}
+	.dw__grid_box_hidden p {
+		margin: 0;
+		font-size: 0.9em;
+	}
 }
 
 /* NEWSLETTER SECTION */

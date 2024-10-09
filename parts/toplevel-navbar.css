@@ -295,7 +295,6 @@
 /*------MOBILE VERSION------*/
 @media screen and (max-width: 720px) {
 	.dw__navbar {
-		width: 100vw;
 		height: 55px;
 		padding: 5px 2vw;
 		position: fixed;

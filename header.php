@@ -14,6 +14,7 @@ $Toplevel_Navbar = new \DW\Toplevel_Navbar\Toplevel_Navbar( $navigation, false )
 <html lang="DE">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
 </head>
 
