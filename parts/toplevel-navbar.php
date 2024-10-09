@@ -69,7 +69,7 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
           private function navbar_logo() { 
                $navbar_logo = '';
                $navbar_logo .= '<div class="dw__navbar_logo" >';
-                    $navbar_logo .= '<a class="" href="#" style="">'; 
+                    $navbar_logo .= '<a class="" href="https://demenzworld.com" style="">'; 
                          $navbar_logo .= '<img src="'.$this->alt_logo.'" alt="logo" style="max-height: 100%; width: auto; object-fit: cover;"/>'; 
                     $navbar_logo .= '</a>';
                $navbar_logo .= '</div>'; 
@@ -127,7 +127,7 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
                          $navbar_donation_lightbox .= '<img src="'.get_stylesheet_directory_uri().'/assets/images/elements/donation.svg" alt="donation"/>';
                          $navbar_donation_lightbox .= '<h3>Unterstütze uns</h3>';
                          $navbar_donation_lightbox .= '<a href="'.$this->donation_link_goenner.'" target="_blank">';
-                         $navbar_donation_lightbox .= '<button class="dw__donation_button_primary">Werde Gänner</button>';
+                         $navbar_donation_lightbox .= '<button class="dw__donation_button_primary">Werde Gönner</button>';
                          $navbar_donation_lightbox .= '</a>';
                          $navbar_donation_lightbox .= '<a href="'.$this->donation_link_spende.'" target="_blank">';
                          $navbar_donation_lightbox .= '<button class="dw__donation_button_secondary">einmalige Spende</button>';

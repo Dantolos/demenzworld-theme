@@ -13,7 +13,7 @@ get_header();
           <!-- HERO -->
           <section class="dw__section_hero_wrapper">
                <div class="dw__hero_left_col">
-                    <h2>Der ChatBot beantwortet all deine Fragen zum Thema Demenz</h2>
+                    <h2>Alzi beantwortet deine Fragen – basierend auf dem Expertenwissen der demenzworld.</h2>
                </div>
                <div class="dw__hero_right_col">
                     <div class="dw__loading_dots" style="position:absolute; top:0; left:0; bottom:0; right:0; margin:auto;z-index:-5;"></div>     
@@ -30,7 +30,8 @@ get_header();
                               $Boxes = get_field('boxes');
                               if(is_array($Boxes) ){
                                    foreach( $Boxes as $Box){ ?>
-                                        <div class="dw__grid_box" style="background-color:<?php echo $Box['color']; ?>;">
+                                 
+                                        <div class="dw__grid_box" style="background-color:<?php echo $Box['color']; ?>;" > 
                                              <div class="dw__grid_box_background_wrapper " >
                                                   <div class="dw__grid_box_background " style="background-image:url(<?php echo $Box['background_shape']; ?>);"></div>
                                              </div>
@@ -39,6 +40,7 @@ get_header();
                                                   <div class="dw__grid_box_hidden">
                                                        <h3 style="color:<?php echo $Box['color']; ?>;"><?php echo $Box['title']; ?></h3>
                                                        <p><?php echo $Box['subtitle']; ?></p>
+                                                       <a href="<?php echo $Box['link']; ?>" target="_blank" style="background-color:<?php echo $Box['color']; ?>;">mehr ...</a>
                                                   </div>
                                              </div>
                                              <div class="dw__grid_box_hover_content">
@@ -47,7 +49,9 @@ get_header();
                                                        <img class="dw__box_icon" src="<?php echo $Box['icon']; ?>"/>
                                                   </div>
                                              </div>
+                                             
                                         </div>
+                                        
                                    <?php }
                               } ?>
                              

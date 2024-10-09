@@ -195,6 +195,16 @@ h2 {
 .dw__grid_box_hidden p {
 	margin: 0;
 }
+.dw__grid_box_hidden a {
+	display: inline-block;
+	margin-top: 10px;
+	font-family: Herbit;
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
+	padding: 5px 20px;
+	border-radius: 20px;
+}
 
 .dw__grid_box_hover_content {
 	width: 100%;
