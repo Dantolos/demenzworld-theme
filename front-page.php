@@ -38,7 +38,11 @@ get_header();
                                              <div class="dw__grid_box_text">
                                                   <h3><?php echo $Box['title']; ?></h3>
                                                   <div class="dw__grid_box_hidden">
-                                                       <h3 style="color:<?php echo $Box['color']; ?>;"><?php echo $Box['title']; ?></h3>
+                                                       <?php if ($Box['logo']) {
+                                                            echo '<img class="dw__grid_box_logo" src="' . $Box['logo'] . '" />'; 
+                                                       } else {
+                                                            echo '<h3 style="color:' . $Box['color'] . '">' . $Box['title'] . '</h3>'; 
+                                                       }?>
                                                        <p><?php echo $Box['subtitle']; ?></p>
                                                        <a href="<?php echo $Box['link']; ?>" target="_blank" style="background-color:<?php echo $Box['color']; ?>;">mehr ...</a>
                                                   </div>
