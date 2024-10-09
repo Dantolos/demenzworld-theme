@@ -10,7 +10,7 @@ include_once( get_stylesheet_directory() . '/inc/acf/acf-config.php' );
 require_once( get_stylesheet_directory() . '/inc/api/toplevel-navbar.api.php' );
  
 function custom_theme_scripts() { 
-     wp_enqueue_style('main-stylesheet', get_template_directory_uri() . '/assets/style/main.css'); 
+     wp_enqueue_style('main-stylesheet', get_template_directory_uri() . '/assets/style/main.css', array(), wp_get_theme()->get('Version')); 
 
      wp_enqueue_script('rellax', 'https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js', array(), null, false); 
      wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/scripts/main.js', array(), null, false); 
