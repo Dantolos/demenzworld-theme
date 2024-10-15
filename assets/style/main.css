@@ -192,6 +192,7 @@ h2 {
 	max-width: 80%;
 	transform: translateY(80px);
 	margin-bottom: 10px;
+	transition: all 300ms ease-out;
 }
 .dw__grid_box_hidden > h3 {
 	font-size: 3.2rem;
@@ -277,6 +278,7 @@ h2 {
 .dw__grid_box:hover .dw__grid_box_hidden > h3 {
 	transform: translateY(0px);
 }
+
 .dw__grid_box:hover .dw__grid_box_hidden > .dw__grid_box_logo {
 	transform: translateY(0px);
 }

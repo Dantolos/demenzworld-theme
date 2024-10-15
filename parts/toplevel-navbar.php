@@ -185,7 +185,7 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
           //GET JS File Content in a script-tag
           private function get_script() {
                $jsFile = __DIR__.'/toplevel-navbar.js';
-               $js_return = '<script type="text/javascript">';
+               $js_return = '<script type="text/javascript" defer>';
                if (file_exists($jsFile)) {
                     $js_return .= file_get_contents($jsFile);
                }
