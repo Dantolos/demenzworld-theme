@@ -5,21 +5,20 @@ require_once(get_stylesheet_directory().'/parts/toplevel-navbar.php');
 function toplevel_navbar( \WP_REST_Request $request ) {
 	
 	$args = $request->get_params(); 
+	$navigation = get_field('navigation', 'options');
 
-	$navigation = array(
-		['name' => 'journal', 'url' => 'https://demenzjournal.com/', 'color' => '#8456BA'],
-		['name' => 'wiki', 'url' => 'https://demenzwiki.com/', 'color' => '#dd3333'],
-		['name' => 'meets', 'url' => 'https://www.demenzmeet.ch/', 'color' => '#db007e'],
-		['name' => 'forum', 'url' => 'https://www.facebook.com/demenzworldcom', 'color' => '#F5AA00'],
-	);
-
+	$jsFile = get_stylesheet_directory_uri().'/parts/toplevel-navbar.js'; 
+	$js_script = file_get_contents($jsFile) ?: false;
+ 
      $Toplevel_Navbar = new \DW\Toplevel_Navbar\Toplevel_Navbar($navigation, false);
 
 	
 
      $navbar_endpoint = [
 		'endpoint' => '/toplevel-navbar', 
-          "toplevel_navbar" => $Toplevel_Navbar->render()
+          "toplevel_navbar" => $Toplevel_Navbar->render(),
+		'as' => $jsFile,
+		'script' => $js_script
      ];
 
 	// Filter: fields=XYZ 
