@@ -18,8 +18,7 @@ function toplevel_navbar( \WP_REST_Request $request ) {
      $navbar_endpoint = [ 
 		'style_link' => get_stylesheet_directory_uri().'/parts/toplevel-navbar.css',
 		'script_link' => get_stylesheet_directory_uri().'/parts/toplevel-navbar.js',
-          'toplevel_navbar' => $Toplevel_Navbar->render(),
-		'fonts_embed' => get_stylesheet_directory_uri().'/assets/style/fonts.css',
+          'toplevel_navbar' => $Toplevel_Navbar->render(), 
 		'style' => $css_script,
 		'content' => '<div class="dw__global_nav_embed_wrapper" style="opacity: 0; ">'.$Toplevel_Navbar->navbar_content().'</div>',
 		'script' => $js_script
