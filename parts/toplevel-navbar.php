@@ -40,30 +40,36 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
        
                $render_output .= '<div class="dw__navbar_wrapper">';
                $render_output .=  $this->get_style();
-               
-                    $render_output .= '<nav class="dw__navbar" style="background-color:'.$this->bg_color.';"> ';
-                         $render_output .= $this->navbar_logo();
 
-                         $render_output .= '<div class="dw__navbar_navigation_container">';
-                              $render_output .= $this->navbar_navigation_list();
-                         $render_output .= '</div>';
-
-                         $render_output .= '<div class="dw__navbar_buttons_container">'; 
-                              $render_output .= $this->navbar_donation_trigger(); 
-                              $render_output .= $this->navbar_chatbot_trigger();
-                              $render_output .= $this->navbar_burger_trigger();
-                         $render_output .= '</div>';
-                    $render_output .= '</nav>';
-               
-               
-                    $render_output .= $this->navbar_donation_lightbox();
-                    $render_output .= $this->navbar_chatbot_lightbox();
-                    $render_output .= $this->navbar_burger_lightbox();
+               $render_output .=  $this->navbar_content();
                     
                $render_output .= '</div>';
                $render_output .= $this->js_script;
 
                return $render_output;
+          }
+
+          public function navbar_content(){
+               $navbar_content = '';
+               $navbar_content .= '<nav class="dw__navbar" style="background-color:'.$this->bg_color.';"> ';
+                    $navbar_content .= $this->navbar_logo();
+
+                    $navbar_content .= '<div class="dw__navbar_navigation_container">';
+                         $navbar_content .= $this->navbar_navigation_list();
+                    $navbar_content .= '</div>';
+
+                    $navbar_content .= '<div class="dw__navbar_buttons_container">'; 
+                         $navbar_content .= $this->navbar_donation_trigger(); 
+                         $navbar_content .= $this->navbar_chatbot_trigger();
+                         $navbar_content .= $this->navbar_burger_trigger();
+                    $navbar_content .= '</div>';
+               $navbar_content .= '</nav>';
+          
+          
+               $navbar_content .= $this->navbar_donation_lightbox();
+               $navbar_content .= $this->navbar_chatbot_lightbox();
+               $navbar_content .= $this->navbar_burger_lightbox();
+               return $navbar_content;
           }
 
           private function navbar_logo() { 

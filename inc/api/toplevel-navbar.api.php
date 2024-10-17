@@ -9,6 +9,9 @@ function toplevel_navbar( \WP_REST_Request $request ) {
 
 	$jsFile = get_stylesheet_directory_uri().'/parts/toplevel-navbar.js'; 
 	$js_script = file_get_contents($jsFile) ?: false;
+
+	$cssFile = get_stylesheet_directory_uri().'/parts/toplevel-navbar.css'; 
+	$css_script = file_get_contents($cssFile) ?: false;
  
      $Toplevel_Navbar = new \DW\Toplevel_Navbar\Toplevel_Navbar($navigation, false);
 
@@ -16,8 +19,11 @@ function toplevel_navbar( \WP_REST_Request $request ) {
 
      $navbar_endpoint = [
 		'endpoint' => '/toplevel-navbar', 
+		'style_link' => get_stylesheet_directory_uri().'/parts/toplevel-navbar.css',
+		'script_link' => get_stylesheet_directory_uri().'/parts/toplevel-navbar.js',
           "toplevel_navbar" => $Toplevel_Navbar->render(),
-		'as' => $jsFile,
+		'style' => $css_script,
+		'content' => $Toplevel_Navbar->navbar_content(),
 		'script' => $js_script
      ];
 

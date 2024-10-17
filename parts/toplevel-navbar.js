@@ -1,5 +1,3 @@
-console.log("-------> loaded nav script");
-
 const HEADER = document.querySelector(".dw__navbar");
 
 HEADER.addEventListener("click", () => {});
