@@ -3,7 +3,6 @@ const HEADER = document.querySelector(".dw__navbar");
 HEADER.addEventListener("click", () => {});
 
 const openLightBox = (containerClassName) => {
-	console.log("open Lightbox:  " + containerClassName);
 	const LIGHTBOXCONTAINER = document.querySelector(containerClassName);
 	LIGHTBOXCONTAINER.classList.add("dw__active_lightbox");
 	LIGHTBOXCONTAINER.addEventListener("click", () => {

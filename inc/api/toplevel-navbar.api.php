@@ -14,16 +14,14 @@ function toplevel_navbar( \WP_REST_Request $request ) {
 	$css_script = file_get_contents($cssFile) ?: false;
  
      $Toplevel_Navbar = new \DW\Toplevel_Navbar\Toplevel_Navbar($navigation, false);
-
-	
-
-     $navbar_endpoint = [
-		'endpoint' => '/toplevel-navbar', 
+ 
+     $navbar_endpoint = [ 
 		'style_link' => get_stylesheet_directory_uri().'/parts/toplevel-navbar.css',
 		'script_link' => get_stylesheet_directory_uri().'/parts/toplevel-navbar.js',
-          "toplevel_navbar" => $Toplevel_Navbar->render(),
+          'toplevel_navbar' => $Toplevel_Navbar->render(),
+		'fonts_embed' => get_stylesheet_directory_uri().'/assets/style/fonts.css',
 		'style' => $css_script,
-		'content' => $Toplevel_Navbar->navbar_content(),
+		'content' => '<div class="dw__global_nav_embed_wrapper" style="opacity: 0; ">'.$Toplevel_Navbar->navbar_content().'</div>',
 		'script' => $js_script
      ];
 
