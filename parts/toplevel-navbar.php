@@ -42,7 +42,7 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
                $render_output .=  $this->get_style();
 
                $render_output .=  $this->navbar_content();
-                    
+
                $render_output .= '</div>';
                $render_output .= $this->js_script;
 
@@ -113,14 +113,30 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
           private function navbar_navigation_list(  ) {
                $navbar_navigation = '';
                $navbar_navigation .= '<ul class="dw__navbar_navigation">';
-               foreach( $this->navigation as $navigation_item ){
-                    $navigation_link = isset($navigation_item['link']['url']) ? $navigation_item['link'] : array('url' => '*', 'target' => '' );
-                    $navbar_navigation .= '<li class="dw__navbar_navigation_item">';
-                         $navbar_navigation .= '<a class="nav-link dropdown-toggle" style="color:'.$navigation_item['color'].';" href="'. $navigation_link['url'].'" target="'. $navigation_link['target'].'"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-                         $navbar_navigation .= $navigation_item['title'];
-                         $navbar_navigation .= '</a>';
+                    foreach( $this->navigation as $navigation_item ){
+                         $navigation_link = isset($navigation_item['link']['url']) ? $navigation_item['link'] : array('url' => '*', 'target' => '' );
+                         $navbar_navigation .= '<li class="dw__navbar_navigation_item">';
+                              $navbar_navigation .= '<a class="nav-link dropdown-toggle" style="color:'.$navigation_item['color'].';" href="'. $navigation_link['url'].'" target="'. $navigation_link['target'].'"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                              $navbar_navigation .= $navigation_item['title'];
+                              $navbar_navigation .= '</a>';
+                         $navbar_navigation .= '</li>';
+                    } 
+                    // DROPDOWN
+                    $navbar_navigation .= '<li class="dw__navbar_navigation_item dw__navbar_navigation_item_dropdown">';
+                         $navbar_navigation .= 'Unterstützung';
+                         $navbar_navigation .= '<ul class="dw__navbar_dropdown_menu" aria-labelledby="navbarDropdown">';
+                              $navbar_navigation .= '<li class="dw__navbar_dropdown_item">';
+                                   $navbar_navigation .= '<a class="nav-link dropdown-toggle" href="'. $navigation_link['url'].'" target="'. $navigation_link['target'].'"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                                   $navbar_navigation .= 'Werde Gönner';
+                                   $navbar_navigation .= '</a>';
+                              $navbar_navigation .= '</li>';
+                              $navbar_navigation .= '<li class="dw__navbar_dropdown_item">';
+                                   $navbar_navigation .= '<a class="nav-link dropdown-toggle" href="'. $navigation_link['url'].'" target="'. $navigation_link['target'].'"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                                   $navbar_navigation .= 'Einmalige Spende';
+                                   $navbar_navigation .= '</a>';
+                              $navbar_navigation .= '</li>';
+                         $navbar_navigation .= '</ul>'; 
                     $navbar_navigation .= '</li>';
-               } 
                $navbar_navigation .= '</ul>'; 
                return $navbar_navigation;
           } 
@@ -160,15 +176,34 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
           private function navbar_burger_lightbox() { 
                $navbar_burger_lightbox = '';
                $navbar_burger_lightbox .= '<div class="dw__lightbox_container dw__burger_lightbox_container">';
-                    $navbar_burger_lightbox .= '<div class="dw__burger_lightbox">'; 
-                         foreach( $this->navigation as $navigation_item ){
-                              $navigation_link = isset($navigation_item['link']['url']) ? $navigation_item['link'] : array('url' => '*', 'target' => '' );
-                              $navbar_burger_lightbox .= '<a class="nav-link dropdown-toggle"  href="'. $navigation_link['url'].'" target="'. $navigation_link['target'].'"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-                                   $navbar_burger_lightbox .= '<div class="dw__burger_navigation_item" style="background-color:'.$navigation_item['color'].';">';
-                                        $navbar_burger_lightbox .= $navigation_item['title'];
-                                   $navbar_burger_lightbox .= '</div>';
-                              $navbar_burger_lightbox .= '</a>';
-                         }  
+                    $navbar_burger_lightbox .= '<div class="dw__burger_lightbox" >';
+                         $navbar_burger_lightbox .= '<div class="dw__burger_navlist_wrapper" style="hide-scrollbar">';
+                              foreach( $this->navigation as $navigation_item ){
+                                   $navigation_link = isset($navigation_item['link']['url']) ? $navigation_item['link'] : array('url' => '*', 'target' => '' );
+                                   $navbar_burger_lightbox .= '<a class="nav-link dropdown-toggle"  href="'. $navigation_link['url'].'" target="'. $navigation_link['target'].'"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                                        $navbar_burger_lightbox .= '<div class="dw__burger_navigation_item" style="background-color:'.$navigation_item['color'].';">';
+                                             $navbar_burger_lightbox .= $navigation_item['title'];
+                                        $navbar_burger_lightbox .= '</div>';
+                                   $navbar_burger_lightbox .= '</a>';
+                              }  
+
+                              $navbar_burger_lightbox .= '<div class="dw__burger_navigation_item dw__burger_navigation_item_dropdown">';
+                              $navbar_burger_lightbox .= 'Unterstützung';
+                              $navbar_burger_lightbox .= '<ul class="dw__burger_dropdown_menu" aria-labelledby="navbarDropdown">';
+                                   $navbar_burger_lightbox .= '<li class="dw__burger_dropdown_item">';
+                                        $navbar_burger_lightbox .= '<a class="nav-link dropdown-toggle" href="#" target="_blank"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                                        $navbar_burger_lightbox .= 'Werde Gönner';
+                                        $navbar_burger_lightbox .= '</a>';
+                                   $navbar_burger_lightbox .= '</li>';
+                                   $navbar_burger_lightbox .= '<li class="dw__burger_dropdown_item">';
+                                        $navbar_burger_lightbox .= '<a class="nav-link dropdown-toggle" href="#" target="_blank"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                                        $navbar_burger_lightbox .= 'Einmalige Spende';
+                                        $navbar_burger_lightbox .= '</a>';
+                                   $navbar_burger_lightbox .= '</li>';
+                                   $navbar_burger_lightbox .= '</ul>';
+                              $navbar_burger_lightbox .= '</div>';  
+                         $navbar_burger_lightbox .= '</div >';
+
                          $navbar_burger_lightbox .= '<button class="dw__burger_lightbox_close_btn" onclick="closeLightBox(\'.dw__burger_lightbox_container\')"><img src="'.get_stylesheet_directory_uri().'/assets/images/close-icon.svg" alt="close-icon" style="opacity:.6; transform:scale(1.2); filter: grayscale(1);"/></button>';
 
                     $navbar_burger_lightbox .= '</div>';
