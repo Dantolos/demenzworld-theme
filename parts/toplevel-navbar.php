@@ -126,12 +126,12 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
                          $navbar_navigation .= 'Unterstützung';
                          $navbar_navigation .= '<ul class="dw__navbar_dropdown_menu" aria-labelledby="navbarDropdown">';
                               $navbar_navigation .= '<li class="dw__navbar_dropdown_item">';
-                                   $navbar_navigation .= '<a class="nav-link dropdown-toggle" href="'. $navigation_link['url'].'" target="'. $navigation_link['target'].'"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                                   $navbar_navigation .= '<a class="nav-link dropdown-toggle" href="'.$this->donation_link_goenner.'" target="_blank"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
                                    $navbar_navigation .= 'Werde Gönner';
                                    $navbar_navigation .= '</a>';
                               $navbar_navigation .= '</li>';
                               $navbar_navigation .= '<li class="dw__navbar_dropdown_item">';
-                                   $navbar_navigation .= '<a class="nav-link dropdown-toggle" href="'. $navigation_link['url'].'" target="'. $navigation_link['target'].'"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                                   $navbar_navigation .= '<a class="nav-link dropdown-toggle" href="'.$this->donation_link_spende.'" target="_blank" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
                                    $navbar_navigation .= 'Einmalige Spende';
                                    $navbar_navigation .= '</a>';
                               $navbar_navigation .= '</li>';
