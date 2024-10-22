@@ -191,12 +191,12 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
                               $navbar_burger_lightbox .= 'Unterstützung';
                               $navbar_burger_lightbox .= '<ul class="dw__burger_dropdown_menu" aria-labelledby="navbarDropdown">';
                                    $navbar_burger_lightbox .= '<li class="dw__burger_dropdown_item">';
-                                        $navbar_burger_lightbox .= '<a class="nav-link dropdown-toggle" href="#" target="_blank"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                                        $navbar_burger_lightbox .= '<a class="nav-link dropdown-toggle" href="'.$this->donation_link_goenner.'" target="_blank"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
                                         $navbar_burger_lightbox .= 'Werde Gönner';
                                         $navbar_burger_lightbox .= '</a>';
                                    $navbar_burger_lightbox .= '</li>';
                                    $navbar_burger_lightbox .= '<li class="dw__burger_dropdown_item">';
-                                        $navbar_burger_lightbox .= '<a class="nav-link dropdown-toggle" href="#" target="_blank"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                                        $navbar_burger_lightbox .= '<a class="nav-link dropdown-toggle" href="'.$this->donation_link_spende.'" target="_blank"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
                                         $navbar_burger_lightbox .= 'Einmalige Spende';
                                         $navbar_burger_lightbox .= '</a>';
                                    $navbar_burger_lightbox .= '</li>';
