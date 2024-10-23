@@ -33,6 +33,7 @@
 	text-decoration: none;
 	color: #170056;
 	font-family: Herbit;
+	font-size: 20px !important;
 }
 .dw__navbar_navigation {
 	display: flex;
