@@ -1,0 +1,45 @@
+body {
+	z-index: 0;
+}
+.dw__global_footer {
+	z-index: -10;
+	background-color: #170056;
+	color: white;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	min-height: 80vh;
+}
+
+.dw__global_footer_overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: white;
+}
+.dw__global_footer_overlay > svg {
+	position: absolute;
+
+	width: 100%;
+	height: auto;
+}
+
+.dw__global_footer h3 {
+	margin: 0;
+}
+.dw__global_footer {
+	/* padding: 5vw 0; */
+	display: flex;
+	justify-content: center;
+}
+.dw__global_footer_container {
+	padding: 160px 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 90%;
+	min-height: unset;
+	padding-bottom: 40px;
+}
