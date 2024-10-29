@@ -24,13 +24,12 @@ get_header();
           <section class="dw__section_dark_wrapper dw__section_platform_grid_wrapper">
                <div class="dw__section_dark_shape_divider divider_top" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/images/elements/dw-shape_divider_top_blue.svg);">
                </div>
-               <div class="dw__section_dark_wrapper_inner" > 
+               <div class="dw__section_dark_wrapper_inner"> 
                          <div class="dw__section_platform_grid">
                               <?php 
                               $Boxes = get_field('boxes');
                               if(is_array($Boxes) ){
-                                   foreach( $Boxes as $Box){ ?>
-                                 
+                                   foreach( $Boxes as $Box){ ?> 
                                         <div class="dw__grid_box" style="background-color:<?php echo $Box['color']; ?>;" > 
                                              <div class="dw__grid_box_background_wrapper " >
                                                   <div class="dw__grid_box_background " style="background-image:url(<?php echo $Box['background_shape']; ?>);"></div>
@@ -52,10 +51,8 @@ get_header();
                                                        <img class="dw__box_icon_background" src="<?php echo $Box['icon_background']; ?>"/>
                                                        <img class="dw__box_icon" src="<?php echo $Box['icon']; ?>"/>
                                                   </div>
-                                             </div>
-                                             
-                                        </div>
-                                        
+                                             </div> 
+                                        </div> 
                                    <?php }
                               } ?>
                              
@@ -71,8 +68,8 @@ get_header();
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/pictures/dw-newsletter_image.png" alt="" width="100%">
                </div>
                <div class="dw__section_newsletter_col_right">
-                    <h4>Newsletter</h4>
-                    <h2 style="color:#db007e;">Aus 🐘 werden 🐘🐘🐘:</h2>
+                    <h4 >Newsletter</h4>
+                    <h2 style="color:#db007e;" id="newsletter">Aus 🐘 werden 🐘🐘🐘:</h2>
                     <script type="text/javascript" src="//livelearninglabs.friendlyautomate.ch/form/generate.js?id=92"></script>
                          
                </div>
@@ -83,22 +80,19 @@ get_header();
                </div>
                <div class="dw__section_white_wrapper_inner" >   
            
-                    <h2 style="padding:0 5%; width:90%; text-align:center;">Diese Organisationen unterstützen uns.</h2>
+                    <h2 style="padding:0 5%; width:90%; text-align:center;">Diese Organisationen unterstützen uns:</h2>
                     <div class="dw__supporter_grid" style="">   
                     <?php 
                     $supporters = get_field('supporters');
                     if(is_array($supporters) ){ 
                          foreach( $supporters as $supporter){ ?>
-                         <div class="dw__supporter_logo" style="">
+                         <div class="dw__supporter_logo" >
                               <img src="<?php echo $supporter['logo']; ?>" alt="<?php echo $supporter['name']; ?>"  title="<?php echo $supporter['name']; ?>" width="100%">
                          </div> 
                     <?php }} ?>
                </div>
           </section>
-
-         
-
-          
+ 
      </div> 
 </div>
 

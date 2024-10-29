@@ -24,6 +24,25 @@ add_action('wp_enqueue_scripts', 'custom_theme_scripts');
 //require_once get_template_directory() . '/inc/blocks/blocks.php';
 
 
+/*-------------------------------------------------------------*/
+/*------------------------SVG Erlauben-------------------------*/
+/*-------------------------------------------------------------*/
+function add_cors_http_header(){
+     header("Access-Control-Allow-Origin: *");
+     header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+     header("Access-Control-Allow-Headers: Content-Type, Authorization");
+ }
+ 
+ add_action('rest_api_init', function() {
+     remove_filter('rest_pre_serve_request', 'rest_send_cors_headers');
+     add_filter('rest_pre_serve_request', function($value) {
+         add_cors_http_header();
+         return $value;
+     });
+ });
+
+
+
 
 /*-------------------------------------------------------------*/
 /*------------------------SVG Erlauben-------------------------*/
