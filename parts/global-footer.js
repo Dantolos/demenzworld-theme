@@ -1,4 +1,4 @@
-const DW_FOOTER = document.querySelector(".dw__global_footer");
+var DW_FOOTER = document.querySelector(".dw__global_footer");
 const FOOTER_OFFSET = 0;
 
 var FOOTER_HEIGHT = DW_FOOTER.clientHeight;
