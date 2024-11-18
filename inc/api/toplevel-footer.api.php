@@ -18,7 +18,7 @@ function toplevel_footer( \WP_REST_Request $request ) {
   $footer_endpoint = [
     'style_link' => get_stylesheet_directory_uri().'/parts/global-footer.css',
     'script_link' => get_stylesheet_directory_uri().'/parts/global-footer.js',
-    'content' => '<div class="dw__global_footer_embed_wrapper">'.$Global_Footer->render().'</div>',
+    'content' => '<div class="dw__global_footer_embed_wrapper">'.$Global_Footer->footer_content().'</div>',
   ];
   return $footer_endpoint;
 }

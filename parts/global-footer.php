@@ -18,36 +18,42 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
           public function render():string {
                $render_output = '';
                $render_output .=  $this->get_style();
-               $render_output .= '<section class="dw__global_footer">'; 
-
-                    $render_output .= '<div class="dw__global_footer_overlay">';
-                         $render_output .= $this->shape_divider();
-                    $render_output .= '</div>';
-
-                    // CONTENT
-                    $render_output .= '<div class="dw__global_footer_container">';
-                         $render_output .= '<div class="dw__footer_scroll_overlay"></div>';
-                         $render_output .= '<div class="dw__global_footer_inner">';
-                              
-                              $render_output .= '<div class="dw__footer_left">';
-                                   if($this->footer_Navigation_Section){
-                                        $render_output .= $this->address_block();
-                                   }
-                              $render_output .= '</div>';
-                              $render_output .= '<div class="dw__footer_mid">';
-                                   $render_output .= $this->footer_call_to_action();    
-                              $render_output .= '</div>';
-                              $render_output .= '<div class="dw__footer_right">';
-                                   $render_output .= $this->navigation_block();    
-                              $render_output .= '</div>';
-                              
-                         $render_output .= '</div>';
-                    $render_output .= '</div>';
-
-               $render_output .= '</section>';
-               $render_output .= $this->navbar_newsletter_lightbox();
+               $render_output .= $this->footer_content();
                $render_output .= $this->get_script();
                return $render_output; 
+          }
+
+          public function footer_content():string {
+               $footer_content = '';
+               $footer_content .= '<section class="dw__global_footer">'; 
+
+                    $footer_content .= '<div class="dw__global_footer_overlay">';
+                         $footer_content .= $this->shape_divider();
+                    $footer_content .= '</div>';
+
+                    // CONTENT
+                    $footer_content .= '<div class="dw__global_footer_container">';
+                         $footer_content .= '<div class="dw__footer_scroll_overlay"></div>';
+                         $footer_content .= '<div class="dw__global_footer_inner">';
+                              
+                              $footer_content .= '<div class="dw__footer_left">';
+                                   if($this->footer_Navigation_Section){
+                                        $footer_content .= $this->address_block();
+                                   }
+                              $footer_content .= '</div>';
+                              $footer_content .= '<div class="dw__footer_mid">';
+                                   $footer_content .= $this->footer_call_to_action();    
+                              $footer_content .= '</div>';
+                              $footer_content .= '<div class="dw__footer_right">';
+                                   $footer_content .= $this->navigation_block();    
+                              $footer_content .= '</div>';
+                              
+                         $footer_content .= '</div>';
+                    $footer_content .= '</div>';
+
+               $footer_content .= '</section>';
+               $footer_content .= $this->navbar_newsletter_lightbox();
+               return $footer_content;
           }
 
           public function address_block():string { 
