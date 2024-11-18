@@ -1,12 +1,12 @@
-const FOOTER = document.querySelector(".dw__global_footer");
+const DW_FOOTER = document.querySelector(".dw__global_footer");
 const FOOTER_OFFSET = 0;
 
-var FOOTER_HEIGHT = FOOTER.clientHeight;
+var FOOTER_HEIGHT = DW_FOOTER.clientHeight;
 document.querySelector("body").style.marginBottom =
 	FOOTER_HEIGHT - FOOTER_OFFSET + "px";
 
 window.addEventListener("resize", () => {
-	FOOTER_HEIGHT = FOOTER.clientHeight;
+	FOOTER_HEIGHT = DW_FOOTER.clientHeight;
 	document.querySelector("body").style.marginBottom =
 		FOOTER_HEIGHT - FOOTER_OFFSET + "px";
 });
@@ -56,7 +56,7 @@ const ALIGN_SVG = () => {
 		FOOTER_OVERLAY_DIVIDER.getBoundingClientRect().height - 20;
 	FOOTER_OVERLAY_DIVIDER.style.transform =
 		"translateY(" + FOOTER_OVERLAY_HEIGHT + "px)";
-	console.log(FOOTER_OVERLAY_DIVIDER_HEIGHT);
+	//console.log(FOOTER_OVERLAY_DIVIDER_HEIGHT);
 };
 ALIGN_SVG();
 window.addEventListener("resize", () => ALIGN_SVG());

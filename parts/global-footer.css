@@ -85,7 +85,7 @@ html {
 .dw__footer_call_to_action {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: stretch;
 	gap: 20px;
 }
 .dw__footer_call_to_action button {
@@ -124,4 +124,67 @@ html {
 	background-color: white;
 	border-radius: 20px;
 	padding: 20px;
+	max-width: 800px;
+	max-height: 80vh;
+	overflow-y: scroll;
+}
+
+.dw__footer_scroll_overlay {
+	display: none;
+}
+
+@media screen and (max-width: 900px) {
+	body {
+		margin-bottom: 0 !important;
+	}
+	.dw__global_footer {
+		position: relative;
+		z-index: 10;
+	}
+	.dw__global_footer_overlay {
+		display: none;
+	}
+	.dw__global_footer_container {
+		padding: 60px 5% 160px 5%;
+		z-index: 10;
+	}
+	.dw__global_footer_inner {
+		z-index: -2;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		border: none;
+		/* max-height: 80vh; */
+		margin-bottom: 10vh;
+		overflow-y: scroll;
+		scrollbar-width: 1px;
+		scrollbar-width: none;
+	}
+
+	.dw__global_footer_inner::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+
+	.dw__footer_left {
+		order: 3;
+		align-self: flex-start;
+	}
+	.dw__footer_mid {
+		order: 1;
+	}
+
+	.dw__footer_right {
+		width: 100%;
+		order: 2;
+		padding-top: 40px;
+		flex-direction: row;
+		justify-content: space-between;
+		border-top: 1px solid rgba(255, 255, 255, 0.292);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.292);
+	}
 }

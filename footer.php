@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once(__DIR__.'/parts/global-footer.php');
 $Global_Footer = new \DW\Global_Footer\Global_Footer(  );
-$staticFooter = true;
+$staticFooter = false;
 if(!$staticFooter){
 	echo $Global_Footer->render();
 }else {

@@ -8,6 +8,8 @@ include_once( get_stylesheet_directory() . '/inc/acf/acf-config.php' );
  
 // CUSTOM ENDPOINT
 require_once( get_stylesheet_directory() . '/inc/api/toplevel-navbar.api.php' );
+require_once( get_stylesheet_directory() . '/inc/api/toplevel-footer.api.php' );
+
  
 function custom_theme_scripts() { 
      wp_enqueue_style('main-stylesheet', get_template_directory_uri() . '/assets/style/main.css', array(), wp_get_theme()->get('Version')); 
