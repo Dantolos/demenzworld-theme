@@ -68,8 +68,8 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
                $footer_cta = '';
                $footer_cta .= '<div class="dw__footer_call_to_action">';
                     $footer_cta .= '<img src="'.get_template_directory_uri().'/assets/images/elements/dw-donation-hearts-monoblue.svg" alt="thanks">';
-                    $footer_cta .= '<button onclick="window.location.href\''.$this->donation_link_goenner.'\';">Werde Gönner</button>';
-                    $footer_cta .= '<button onclick="window.location.href\''.$this->donation_link_spende.'\';">Einmalige Spende</button>';
+                    $footer_cta .= '<button onclick="window.location.href=\''.$this->donation_link_goenner.'\';">Werde Gönner</button>';
+                    $footer_cta .= '<button onclick="window.location.href=\''.$this->donation_link_spende.'\';">Einmalige Spende</button>';
                     $footer_cta .= '<div class="dw__footer_call_to_action_divider"><div class="divider_dot"></div><div class="divider_dot"></div><div class="divider_dot"></div><div class="divider_dot"></div></div>';
                     $footer_cta .= '<button onclick="openLightBox(\'.dw__newsletter_lightbox_container\')">Newsletter</button>';
                $footer_cta .= '</div>';
