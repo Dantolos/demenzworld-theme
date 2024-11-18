@@ -132,6 +132,18 @@ html {
 .dw__footer_scroll_overlay {
 	display: none;
 }
+.dw__footer_social_media {
+	display: flex;
+	gap: 10px;
+}
+.dw__footer_social_media img {
+	width: 25px;
+	height: 25px;
+	transition: all 200ms ease-in-out;
+}
+.dw__footer_social_media img:hover {
+	transform: scale(1.2);
+}
 
 @media screen and (max-width: 900px) {
 	body {
