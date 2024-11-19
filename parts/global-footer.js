@@ -1,5 +1,5 @@
 var DW_FOOTER = document.querySelector(".dw__global_footer");
-const FOOTER_OFFSET = 0;
+var FOOTER_OFFSET = 0;
 
 var FOOTER_HEIGHT = DW_FOOTER.clientHeight;
 document.querySelector("body").style.marginBottom =
@@ -11,9 +11,9 @@ window.addEventListener("resize", () => {
 		FOOTER_HEIGHT - FOOTER_OFFSET + "px";
 });
 
-const FOOTER_OVERLAY = document.querySelector(".dw__global_footer_overlay");
-const FOOTER_OVERLAY_DIVIDER = FOOTER_OVERLAY.querySelector("svg");
-const BODY_COLOR = document.querySelector("body").style.backgroundColor;
+var FOOTER_OVERLAY = document.querySelector(".dw__global_footer_overlay");
+var FOOTER_OVERLAY_DIVIDER = FOOTER_OVERLAY.querySelector("svg");
+var BODY_COLOR = document.querySelector("body").style.backgroundColor;
 console.log(BODY_COLOR);
 
 if (BODY_COLOR) {
@@ -28,7 +28,7 @@ var spaceFromBottom =
 	BODY_RECT.bottom -
 	FOOTER_OVERLAY_DIVIDER.getBoundingClientRect().height;
 
-const BODY_OFFSET = () => {
+var BODY_OFFSET = () => {
 	BODY_RECT = document.querySelector("body").getBoundingClientRect();
 	spaceFromBottom = window.innerHeight - BODY_RECT.bottom - 38;
 
@@ -48,7 +48,7 @@ window.addEventListener("scroll", () => BODY_OFFSET());
 window.addEventListener("resize", () => BODY_OFFSET());
 
 //-----ALIGN SVG POSITION
-const ALIGN_SVG = () => {
+var ALIGN_SVG = () => {
 	let FOOTER_OVERLAY_HEIGHT = document
 		.querySelector(".dw__global_footer_overlay")
 		.getBoundingClientRect().height;
