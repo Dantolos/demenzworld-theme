@@ -6,7 +6,6 @@ document.querySelector("body").style.marginBottom =
 	FOOTER_HEIGHT - FOOTER_OFFSET + "px";
 
 window.addEventListener("resize", () => {
-	console.log(DW_FOOTER.clientHeight);
 	FOOTER_HEIGHT = DW_FOOTER.clientHeight;
 	document.querySelector("body").style.marginBottom =
 		FOOTER_HEIGHT - FOOTER_OFFSET + "px";
@@ -15,7 +14,7 @@ window.addEventListener("resize", () => {
 var FOOTER_OVERLAY = document.querySelector(".dw__global_footer_overlay");
 var FOOTER_OVERLAY_DIVIDER = FOOTER_OVERLAY.querySelector("svg");
 var BODY_COLOR = document.querySelector("body").style.backgroundColor;
-console.log(BODY_COLOR);
+//console.log(BODY_COLOR);
 
 if (BODY_COLOR) {
 	FOOTER_OVERLAY.style.backgroundColor = BODY_COLOR;
@@ -30,6 +29,7 @@ var spaceFromBottom =
 	FOOTER_OVERLAY_DIVIDER.getBoundingClientRect().height;
 
 var BODY_OFFSET = () => {
+	console.log("FOOTER");
 	BODY_RECT = document.querySelector("body").getBoundingClientRect();
 	spaceFromBottom = window.innerHeight - BODY_RECT.bottom - 38;
 
@@ -38,11 +38,12 @@ var BODY_OFFSET = () => {
 	}
 
 	if (spaceFromBottom > 1) {
-		FOOTER_OVERLAY.style.top = "-" + spaceFromBottom + "px";
+		FOOTER_OVERLAY.style.top = "-" + Math.round(spaceFromBottom) + "px";
 	} else {
 		FOOTER_OVERLAY.style.top = "0px";
 	}
 	//console.log(spaceFromBottom);
+	console.log(FOOTER_OVERLAY);
 };
 BODY_OFFSET();
 window.addEventListener("scroll", () => BODY_OFFSET());
@@ -57,7 +58,6 @@ var ALIGN_SVG = () => {
 		FOOTER_OVERLAY_DIVIDER.getBoundingClientRect().height - 20;
 	FOOTER_OVERLAY_DIVIDER.style.transform =
 		"translateY(" + FOOTER_OVERLAY_HEIGHT + "px)";
-	//console.log(FOOTER_OVERLAY_DIVIDER_HEIGHT);
 };
 ALIGN_SVG();
 window.addEventListener("resize", () => ALIGN_SVG());

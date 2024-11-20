@@ -6,9 +6,9 @@ function getScrollFactor(element) {
 	const rect = element.getBoundingClientRect();
 
 	if (rect.y > window.innerHeight) {
-		console.log("Darunter");
+		//console.log("Darunter");
 	} else if ((window.innerHeight / 100) * (rect.y + rect.height) < 0) {
-		console.log("Darüber");
+		//console.log("Darüber");
 	} else {
 		let VisibilityProgress =
 			(window.scrollY / (rect.top + window.scrollY + rect.height)) * 1;
