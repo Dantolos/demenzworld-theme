@@ -6,6 +6,7 @@ document.querySelector("body").style.marginBottom =
 	FOOTER_HEIGHT - FOOTER_OFFSET + "px";
 
 window.addEventListener("resize", () => {
+	console.log(DW_FOOTER.clientHeight);
 	FOOTER_HEIGHT = DW_FOOTER.clientHeight;
 	document.querySelector("body").style.marginBottom =
 		FOOTER_HEIGHT - FOOTER_OFFSET + "px";
