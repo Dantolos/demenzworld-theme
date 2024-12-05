@@ -13,7 +13,7 @@ get_header();
           <!-- HERO -->
           <section class="dw__section_hero_wrapper">
                <div class="dw__hero_left_col">
-                    <h2>Alzi beantwortet deine Fragen – basierend auf dem Expertenwissen der demenzworld.</h2>
+                    <h2>Unser Chatbot beantwortet deine Fragen – basierend auf dem Expertenwissen der demenzworld.</h2>
                </div>
                <div class="dw__hero_right_col">
                     <div class="dw__loading_dots" style="position:absolute; top:0; left:0; bottom:0; right:0; margin:auto;z-index:-5;"></div>     

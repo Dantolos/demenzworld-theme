@@ -42,8 +42,6 @@ var BODY_OFFSET = () => {
 	} else {
 		FOOTER_OVERLAY.style.top = "0px";
 	}
-	//console.log(spaceFromBottom);
-	console.log(FOOTER_OVERLAY);
 };
 BODY_OFFSET();
 window.addEventListener("scroll", () => BODY_OFFSET());
