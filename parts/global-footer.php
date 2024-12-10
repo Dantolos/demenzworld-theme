@@ -62,7 +62,7 @@ if ( ! class_exists( 'Toplevel_Navbar' ) ) {
                $address_block .= '<p>Verein demenzworld<br />c/o Linden 3L AG<br />Weyermannsstrasse 36<br />3008 Bern</p>';
                $address_block .= '<p><a href="mailto:hello@demenzworld.com">hello(at)demenzworld.com</a></p>';
                $address_block .= '<div class="dw__footer_social_media">';
-                    $address_block .= '<a href="https://www.facebook.com/groups/demenzalzheimer " target="_blank"><img src="' . get_template_directory_uri() . '/assets/images/social_media/facebook.svg" alt="facebook" /></a>';
+                    $address_block .= '<a href="https://www.facebook.com/groups/demenzworldcom" target="_blank"><img src="' . get_template_directory_uri() . '/assets/images/social_media/facebook.svg" alt="facebook" /></a>';
                     $address_block .= '<a href="https://www.youtube.com/@demenzworld" target="_blank"><img src="' . get_template_directory_uri() . '/assets/images/social_media/youtube.svg" alt="Youtube" /></a>';
                     $address_block .= '<a href="https://www.instagram.com/demenzworldcom/" target="_blank"><img src="' . get_template_directory_uri() . '/assets/images/social_media/insta.svg" alt="Instagram" /></a>';
                     $address_block .= '<a href="https://www.linkedin.com/company/demenzworld/ " target="_blank" ><img src="' . get_template_directory_uri() . '/assets/images/social_media/linkedin.svg" alt="LinkedIn"  /></a>';
