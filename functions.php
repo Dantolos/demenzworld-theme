@@ -18,7 +18,13 @@ function custom_theme_scripts()
         [],
         wp_get_theme()->get("Version")
     );
+    wp_enqueue_style(
+        "splde-style",
+        "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css",
+        []
+    );
 
+    /*
     wp_enqueue_script(
         "rellax",
         "https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js",
@@ -26,10 +32,18 @@ function custom_theme_scripts()
         null,
         false
     );
+    */
+    wp_enqueue_script(
+        "splide",
+        "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js",
+        [],
+        null,
+        false
+    );
     wp_enqueue_script(
         "main-js",
         get_template_directory_uri() . "/assets/scripts/main.js",
-        [],
+        ["splide"],
         null,
         false
     );

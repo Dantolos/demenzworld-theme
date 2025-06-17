@@ -10,17 +10,27 @@ if (!class_exists("Toplevel_Navbar")) {
         public $alt_logo;
         public $icon;
         public $navigation;
+        public $domain;
         public $donation_link_goenner;
         public $donation_link_spende;
+        public $donation_link_trauerspende;
 
         public $style_sheet;
         private $js_script;
 
-        function __construct(array $navigation, bool $darkmode = false)
-        {
+        /**
+         * @param array $navigation   Navigation structure.
+         * @param bool  $darkmode     Enable dark mode (default: false).
+         * @param string $currentLink Current navigation link (default: "").
+         */
+        function __construct(
+            array $navigation,
+            bool $darkmode = false,
+            string $currentLink = ""
+        ) {
             $this->darkmode = $darkmode;
             $this->navigation = $navigation;
-
+            $this->domain = $currentLink;
             $this->bg_color = $this->darkmode ? "#0C032D" : "#FFFFFF";
 
             $this->primary_logo = !$this->darkmode
@@ -59,7 +69,7 @@ if (!class_exists("Toplevel_Navbar")) {
             return $render_output;
         }
 
-        public function navbar_content()
+        public function navbar_content(): string
         {
             $navbar_content = "";
             $navbar_content .=
@@ -79,13 +89,17 @@ if (!class_exists("Toplevel_Navbar")) {
             $navbar_content .= "</div>";
             $navbar_content .= "</nav>";
 
+            // Chatbot -> Input-Field
+            $navbar_content .= $this->chatbot_input();
+
             $navbar_content .= $this->navbar_donation_lightbox();
             $navbar_content .= $this->navbar_chatbot_lightbox();
             $navbar_content .= $this->navbar_burger_lightbox();
+
             return $navbar_content;
         }
 
-        private function navbar_logo()
+        private function navbar_logo(): string
         {
             $navbar_logo = "";
             $navbar_logo .= '<div class="dw__navbar_logo" >';
@@ -100,7 +114,7 @@ if (!class_exists("Toplevel_Navbar")) {
             return $navbar_logo;
         }
 
-        private function navbar_donation_trigger()
+        private function navbar_donation_trigger(): string
         {
             $navbar_donation_trigger = "";
             $navbar_donation_trigger .=
@@ -113,11 +127,11 @@ if (!class_exists("Toplevel_Navbar")) {
             return $navbar_donation_trigger;
         }
 
-        private function navbar_chatbot_trigger()
+        private function navbar_chatbot_trigger(): string
         {
             $navbar_chatbot_trigger = "";
             $navbar_chatbot_trigger .=
-                '<button onclick="openLightBox(\'.dw__chatbot_lightbox_container\')" class="dw__navbar_chatbot_trigger">';
+                '<button onclick="openLightBox(\'.dw__chatbot_lightbox_container\')" class="dw__navbar_chatbot_trigger dw__navbar_chatbot_trigger_closed">';
             $navbar_chatbot_trigger .=
                 '<img src="' .
                 get_stylesheet_directory_uri() .
@@ -126,7 +140,7 @@ if (!class_exists("Toplevel_Navbar")) {
             return $navbar_chatbot_trigger;
         }
 
-        private function navbar_burger_trigger()
+        private function navbar_burger_trigger(): string
         {
             $navbar_burger_trigger = "";
             $navbar_burger_trigger .=
@@ -139,7 +153,7 @@ if (!class_exists("Toplevel_Navbar")) {
             return $navbar_burger_trigger;
         }
 
-        private function navbar_navigation_list()
+        private function navbar_navigation_list(): string
         {
             $navbar_navigation = "";
             $navbar_navigation .= '<ul class="dw__navbar_navigation">';
@@ -147,16 +161,39 @@ if (!class_exists("Toplevel_Navbar")) {
                 $navigation_link = isset($navigation_item["link"]["url"])
                     ? $navigation_item["link"]
                     : ["url" => "*", "target" => ""];
-                $navbar_navigation .= '<li class="dw__navbar_navigation_item">';
+
+                $font_color = false ? "#170056" : $navigation_item["color"]; // to change font color to uni
+
+                $activ_item_style = "";
+                if (
+                    $this->domain ==
+                    str_replace(
+                        ["/", ".", "https://", "https:", "www"],
+                        "",
+                        $navigation_link["url"]
+                    )
+                ) {
+                    $activ_item_style =
+                        "background-color: " .
+                        $navigation_item["color"] .
+                        ";color:white;border-radius:50px;";
+                    $font_color = "white";
+                }
+
+                $navbar_navigation .=
+                    '<li class="dw__navbar_navigation_item" style="' .
+                    $activ_item_style .
+                    '">';
                 $navbar_navigation .=
                     '<a class="nav-link dropdown-toggle" style="color:' .
-                    $navigation_item["color"] .
+                    $font_color .
                     ';" href="' .
                     $navigation_link["url"] .
                     '" target="' .
                     $navigation_link["target"] .
                     '"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
                 $navbar_navigation .= $navigation_item["title"];
+
                 $navbar_navigation .= "</a>";
                 $navbar_navigation .= "</li>";
             }
@@ -196,7 +233,7 @@ if (!class_exists("Toplevel_Navbar")) {
             return $navbar_navigation;
         }
 
-        private function navbar_donation_lightbox()
+        private function navbar_donation_lightbox(): string
         {
             $navbar_donation_lightbox = "";
             $navbar_donation_lightbox .=
@@ -226,7 +263,7 @@ if (!class_exists("Toplevel_Navbar")) {
             return $navbar_donation_lightbox;
         }
 
-        private function navbar_chatbot_lightbox()
+        private function navbar_chatbot_lightbox(): string
         {
             $navbar_chatbot_lightbox = "";
             $navbar_chatbot_lightbox .=
@@ -250,7 +287,7 @@ if (!class_exists("Toplevel_Navbar")) {
             return $navbar_chatbot_lightbox;
         }
 
-        private function navbar_burger_lightbox()
+        private function navbar_burger_lightbox(): string
         {
             $navbar_burger_lightbox = "";
             $navbar_burger_lightbox .=
@@ -258,6 +295,9 @@ if (!class_exists("Toplevel_Navbar")) {
             $navbar_burger_lightbox .= '<div class="dw__burger_lightbox" >';
             $navbar_burger_lightbox .=
                 '<div class="dw__burger_navlist_wrapper" style="hide-scrollbar">';
+
+            $navbar_burger_lightbox .=
+                '<a class="nav-link " href="https://demenzworld.com/"  ><div class="dw__burger_navigation_item" style="background-color:white; color:#170056;">Demenzworld</div></a>';
             foreach ($this->navigation as $navigation_item) {
                 $navigation_link = isset($navigation_item["link"]["url"])
                     ? $navigation_item["link"]
@@ -313,7 +353,7 @@ if (!class_exists("Toplevel_Navbar")) {
         }
 
         //GET CSS File Content in a style-tag
-        public function get_style()
+        public function get_style(): string
         {
             $cssFile = __DIR__ . "/toplevel-navbar.css";
             $style_return = '<style type="text/css">';
@@ -325,7 +365,7 @@ if (!class_exists("Toplevel_Navbar")) {
         }
 
         //GET JS File Content in a script-tag
-        private function get_script()
+        private function get_script(): string
         {
             $jsFile = __DIR__ . "/toplevel-navbar.js";
             $js_return = '<script type="text/javascript" defer>';
@@ -334,6 +374,30 @@ if (!class_exists("Toplevel_Navbar")) {
             }
             $js_return .= "</script>";
             return $js_return;
+        }
+
+        private function chatbot_input(): string
+        {
+            $chatbot_input = "";
+            $chatbot_input .= '<div class="dw__chatbot_input_wrapper">';
+            $chatbot_input .= '<div class="dw__chatbot_input_container">';
+            $chatbot_input .= '<div class="dw__chatbot_input_field_div">';
+            $chatbot_input .=
+                '<input type="text" value="" placeholder="Frage Sophie" class="dw__chatbot_input_field">';
+            $chatbot_input .=
+                '<img src="' .
+                get_template_directory_uri() .
+                '/assets/images/chat-icon.svg" class="dw__chatbot_icon"/>';
+            $chatbot_input .= "</input>";
+            $chatbot_input .= "</div>";
+            $chatbot_input .=
+                '<button class="dw__chatbot_close_button" onClick="disapearInputField(true)"><img src="' .
+                get_template_directory_uri() .
+                '/assets/images/close-icon-white.svg" width="10px" height="10px"/></button>';
+            $chatbot_input .= "</div>";
+            $chatbot_input .= "</div>";
+
+            return $chatbot_input;
         }
     }
 }

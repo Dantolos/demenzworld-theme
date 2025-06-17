@@ -1,122 +1,116 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2,
-	"settings": {
-		"appearanceTools": true,
-		"typography": {
-			"fluid": false,
-			"fontSizes": [
-				{
-					"name": "Small",
-					"slug": "small",
-					"size": "14px"
-				},
-				{
-					"name": "Medium",
-					"slug": "medium",
-					"size": "18px"
-				},
-				{
-					"name": "Large",
-					"slug": "large",
-					"size": "36px"
-				},
-				{
-					"name": "Extra Large",
-					"slug": "x-large",
-					"size": "42px"
-				}
-			],
-			"fontFamilies": [
-				{
-					"name": "Primary",
-					"slug": "primary",
-					"fontFamily": "'Herbit', sans-serif",
-					"fontFace": [
-						{
-							"fontFamily": "Herbit",
-							"fontWeight": "300 800",
-							"fontStyle": "semibold",
-							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/herbit-semibold.woff2"]
-						}
-					]
-				},
-				{
-					"name": "Secondary",
-					"slug": "secondary",
-					"fontFamily": "'Source Sans Pro', sans-serif",
-					"fontFace": [
-						{
-							"fontFamily": "Source Sans Pro",
-							"fontWeight": "200",
-							"fontStyle": "light",
-							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/source-sans-pro-Light.woff2"]
-						},
-						{
-							"fontFamily": "Source Sans Pro",
-							"fontWeight": "300",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/source-sans-pro-Regular.woff2"]
-						},
-						{
-							"fontFamily": "Source Sans Pro",
-							"fontWeight": "500 600",
-							"fontStyle": "semibold",
-							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/source-sans-pro-Semibold.woff2"]
-						},
-						{
-							"fontFamily": "Source Sans Pro",
-							"fontWeight": "700 800",
-							"fontStyle": "bold",
-							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/source-sans-pro-Bold.woff2"]
-						}
-					]
-				}
-			]
-		}
-	},
-	"styles": {
-		"color": {
-			"text": "#170056",
-			"background": "#ffffff"
-		},
-		"border": {
-			"radius": "20px"
-		},
-		"typography": {
-			"fontFamily": "Source Sans Pro",
-			"fontWeight": "300",
-			"fontSize": "20px"
-		},
-		"elements": {
-			"button": {
-				"typography": {
-					"fontFamily": "Herbit"
-				},
-				"color": {
-					"text": "#ffffff",
-					"background": "#db007e"
-				},
-				"border": {
-					"radius": "14px"
-				},
-				":hover": {
-					"color": {
-						"background": "#170056"
-					}
-				}
-			},
-			"heading": {
-				"typography": {
-					"fontFamily": "Herbit"
-				}
-			}
-		}
-	},
-	"patterns": []
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "typography": {
+      "fluid": false,
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "14px"
+        },
+        {
+          "name": "Medium",
+          "slug": "medium",
+          "size": "18px"
+        },
+        {
+          "name": "Large",
+          "slug": "large",
+          "size": "36px"
+        },
+        {
+          "name": "Extra Large",
+          "slug": "x-large",
+          "size": "42px"
+        }
+      ],
+      "fontFamilies": [
+        {
+          "name": "Primary",
+          "slug": "primary",
+          "fontFamily": "'Herbit', sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Herbit",
+              "fontWeight": "300 800",
+              "fontStyle": "semibold",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/herbit-semibold.woff2"]
+            }
+          ]
+        },
+        {
+          "name": "Secondary",
+          "slug": "secondary",
+          "fontFamily": "'Source Sans Pro', sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Source Sans Pro",
+              "fontWeight": "200",
+              "fontStyle": "light",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/source-sans-pro-Light.woff2"]
+            },
+            {
+              "fontFamily": "Source Sans Pro",
+              "fontWeight": "300",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/source-sans-pro-Regular.woff2"]
+            },
+
+            {
+              "fontFamily": "Source Sans Pro",
+              "fontWeight": "700 800",
+              "fontStyle": "bold",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/source-sans-pro-Bold.woff2"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "text": "#170056",
+      "background": "#ffffff"
+    },
+    "border": {
+      "radius": "20px"
+    },
+    "typography": {
+      "fontFamily": "Source Sans Pro",
+      "fontWeight": "300",
+      "fontSize": "20px"
+    },
+    "elements": {
+      "button": {
+        "typography": {
+          "fontFamily": "Herbit"
+        },
+        "color": {
+          "text": "#ffffff",
+          "background": "#db007e"
+        },
+        "border": {
+          "radius": "14px"
+        },
+        ":hover": {
+          "color": {
+            "background": "#170056"
+          }
+        }
+      },
+      "heading": {
+        "typography": {
+          "fontFamily": "Herbit"
+        }
+      }
+    }
+  },
+  "patterns": []
 }

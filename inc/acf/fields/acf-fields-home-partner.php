@@ -5,13 +5,13 @@ add_action("acf/include_fields", function () {
     }
 
     acf_add_local_field_group([
-        "key" => "group_6703c79e01e65",
-        "title" => "Home | Supporter",
+        "key" => "group_68483c9b744a3",
+        "title" => "Home | Partner",
         "fields" => [
             [
-                "key" => "field_6703c79eb60b0",
-                "label" => "Supporters",
-                "name" => "supporters",
+                "key" => "field_68483c9b7661f",
+                "label" => "Partner",
+                "name" => "partner",
                 "aria-label" => "",
                 "type" => "repeater",
                 "instructions" => "",
@@ -31,7 +31,7 @@ add_action("acf/include_fields", function () {
                 "rows_per_page" => 20,
                 "sub_fields" => [
                     [
-                        "key" => "field_6703c816b60b1",
+                        "key" => "field_68483c9b7717b",
                         "label" => "Logo",
                         "name" => "logo",
                         "aria-label" => "",
@@ -55,10 +55,10 @@ add_action("acf/include_fields", function () {
                         "mime_types" => "",
                         "allow_in_bindings" => 0,
                         "preview_size" => "medium",
-                        "parent_repeater" => "field_6703c79eb60b0",
+                        "parent_repeater" => "field_68483c9b7661f",
                     ],
                     [
-                        "key" => "field_6703c864b60b2",
+                        "key" => "field_68483c9b77182",
                         "label" => "Name",
                         "name" => "name",
                         "aria-label" => "",
@@ -77,10 +77,10 @@ add_action("acf/include_fields", function () {
                         "placeholder" => "",
                         "prepend" => "",
                         "append" => "",
-                        "parent_repeater" => "field_6703c79eb60b0",
+                        "parent_repeater" => "field_68483c9b7661f",
                     ],
                     [
-                        "key" => "field_6847ce91f9dfa",
+                        "key" => "field_68483c9b77186",
                         "label" => "Link",
                         "name" => "link",
                         "aria-label" => "",
@@ -96,7 +96,7 @@ add_action("acf/include_fields", function () {
                         "default_value" => "",
                         "allow_in_bindings" => 0,
                         "placeholder" => "",
-                        "parent_repeater" => "field_6703c79eb60b0",
+                        "parent_repeater" => "field_68483c9b7661f",
                     ],
                 ],
             ],
@@ -110,7 +110,7 @@ add_action("acf/include_fields", function () {
                 ],
             ],
         ],
-        "menu_order" => 0,
+        "menu_order" => 1,
         "position" => "normal",
         "style" => "default",
         "label_placement" => "top",
