@@ -1,6 +1,6 @@
 .dw__navbar {
     width: 96vw;
-    height: 75px;
+    height: 60px;
     padding: 15px 2vw;
     position: fixed;
     top: 0;
@@ -493,7 +493,7 @@
 /*chatbot input*/
 .dw__chatbot_input_wrapper {
     position: fixed;
-    top: 75px;
+    top: 60px;
     z-index: 20;
     width: 100vw;
     height: 150px;
@@ -573,6 +573,9 @@
     border-radius: 25px;
     width: 30px;
     height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1220px) {
