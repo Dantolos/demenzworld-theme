@@ -84,13 +84,14 @@ if (!class_exists("Toplevel_Navbar")) {
 
             $navbar_content .= '<div class="dw__navbar_buttons_container">';
             $navbar_content .= $this->navbar_donation_trigger();
-            $navbar_content .= $this->navbar_chatbot_trigger();
+            $navbar_content .= $this->navbar_chatbot_trigger(false);
             $navbar_content .= $this->navbar_burger_trigger();
             $navbar_content .= "</div>";
             $navbar_content .= "</nav>";
 
             // Chatbot -> Input-Field
-            $navbar_content .= $this->chatbot_input();
+            // change navbar_chatbot_trigger() first param to false if input is active
+            // $navbar_content .= $this->chatbot_input();
 
             $navbar_content .= $this->navbar_donation_lightbox();
             $navbar_content .= $this->navbar_chatbot_lightbox();
@@ -127,11 +128,17 @@ if (!class_exists("Toplevel_Navbar")) {
             return $navbar_donation_trigger;
         }
 
-        private function navbar_chatbot_trigger(): string
-        {
+        private function navbar_chatbot_trigger(
+            $trigger_is_visible = true
+        ): string {
+            $chatbot_trigger_hide_class = $trigger_is_visible
+                ? ""
+                : "dw__navbar_chatbot_trigger_closed";
             $navbar_chatbot_trigger = "";
             $navbar_chatbot_trigger .=
-                '<button onclick="openLightBox(\'.dw__chatbot_lightbox_container\')" class="dw__navbar_chatbot_trigger dw__navbar_chatbot_trigger_closed">';
+                '<button onclick="openLightBox(\'.dw__chatbot_lightbox_container\')" class="dw__navbar_chatbot_trigger ' .
+                $chatbot_trigger_hide_class .
+                '">';
             $navbar_chatbot_trigger .=
                 '<img src="' .
                 get_stylesheet_directory_uri() .
