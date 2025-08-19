@@ -78,15 +78,16 @@ if (!class_exists("Toplevel_Navbar")) {
                 ';"> ';
             $navbar_content .= $this->navbar_logo();
 
-            $navbar_content .= '<div class="dw__navbar_navigation_container">';
-            $navbar_content .= $this->navbar_navigation_list();
-            $navbar_content .= "</div>";
-
             $navbar_content .= '<div class="dw__navbar_buttons_container">';
             $navbar_content .= $this->navbar_donation_trigger();
             $navbar_content .= $this->navbar_chatbot_trigger(true);
             $navbar_content .= $this->navbar_burger_trigger();
             $navbar_content .= "</div>";
+
+            $navbar_content .= '<div class="dw__navbar_navigation_container">';
+            $navbar_content .= $this->navbar_navigation_list();
+            $navbar_content .= "</div>";
+
             $navbar_content .= "</nav>";
 
             // Chatbot -> Input-Field
