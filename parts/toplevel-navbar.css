@@ -332,6 +332,7 @@
 
 .dw__navbar_dropdown_menu {
     position: absolute;
+    right: 0;
     padding: 0px;
     overflow: hidden;
     background-color: white;
