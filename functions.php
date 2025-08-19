@@ -16,12 +16,12 @@ function custom_theme_scripts()
         "main-stylesheet",
         get_template_directory_uri() . "/assets/style/main.css",
         [],
-        wp_get_theme()->get("Version")
+        wp_get_theme()->get("Version"),
     );
     wp_enqueue_style(
         "splde-style",
         "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css",
-        []
+        [],
     );
 
     /*
@@ -38,14 +38,27 @@ function custom_theme_scripts()
         "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js",
         [],
         null,
-        false
+        false,
     );
     wp_enqueue_script(
         "main-js",
         get_template_directory_uri() . "/assets/scripts/main.js",
         ["splide"],
         null,
-        false
+        false,
+    );
+
+    // sophie files
+    wp_enqueue_script(
+        "sophie-chat-js",
+        get_template_directory_uri() . "/inc/sophie/sophie-chat.js",
+        ["jquery"],
+        "1.0",
+        true,
+    );
+    wp_enqueue_style(
+        "sophie-chat-css",
+        get_template_directory_uri() . "/inc/sophie/sophie-chat.css",
     );
 }
 add_action("wp_enqueue_scripts", "custom_theme_scripts");
@@ -80,7 +93,7 @@ add_filter(
     "wp_check_filetype_and_ext",
     "my_svgs_disable_real_mime_check",
     10,
-    4
+    4,
 );
 function my_svgs_disable_real_mime_check($data, $file, $filename, $mimes)
 {

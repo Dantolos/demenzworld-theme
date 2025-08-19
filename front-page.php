@@ -17,7 +17,12 @@ get_header();
                </div>
                <div class="dw__hero_right_col">
                     <div class="dw__loading_dots" style="position:absolute; top:0; left:0; bottom:0; right:0; margin:auto;z-index:-5;"></div>
-                    <iframe style="height:100%;width:100%;position:absolute;" frameBorder="0" src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=8bc27af1-2037-4c5c-974f-a0a094af3250&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2Fe43c27a8-216b-49a7-8ced-cc6252359374%2Fconnect"></iframe>
+                    <?php if (true) { ?>
+                        <iframe style="height:100%;width:100%;position:absolute;" frameBorder="0" src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=8bc27af1-2037-4c5c-974f-a0a094af3250&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2Fe43c27a8-216b-49a7-8ced-cc6252359374%2Fconnect"></iframe>
+                    <?php } else { ?>
+                        <?php echo do_shortcode("[chatbot]"); ?>
+                    <?php } ?>
+
                </div>
           </section>
           <!-- END HERO -->
@@ -123,7 +128,7 @@ get_header();
                             ?>
                             <div class="dw__teaser_box dw__teaser_box_<?php echo $category; ?>">
                                 <a href="<?php echo esc_url(
-                                    $teaser["link"]
+                                    $teaser["link"],
                                 ); ?>">
                                 <div class="dw__teaser_box_icon"><img src="<?php echo $categoriIcon[
                                     $category

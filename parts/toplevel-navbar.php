@@ -26,7 +26,7 @@ if (!class_exists("Toplevel_Navbar")) {
         function __construct(
             array $navigation,
             bool $darkmode = false,
-            string $currentLink = ""
+            string $currentLink = "",
         ) {
             $this->darkmode = $darkmode;
             $this->navigation = $navigation;
@@ -84,7 +84,7 @@ if (!class_exists("Toplevel_Navbar")) {
 
             $navbar_content .= '<div class="dw__navbar_buttons_container">';
             $navbar_content .= $this->navbar_donation_trigger();
-            $navbar_content .= $this->navbar_chatbot_trigger(false);
+            $navbar_content .= $this->navbar_chatbot_trigger(true);
             $navbar_content .= $this->navbar_burger_trigger();
             $navbar_content .= "</div>";
             $navbar_content .= "</nav>";
@@ -129,7 +129,7 @@ if (!class_exists("Toplevel_Navbar")) {
         }
 
         private function navbar_chatbot_trigger(
-            $trigger_is_visible = true
+            $trigger_is_visible = true,
         ): string {
             $chatbot_trigger_hide_class = $trigger_is_visible
                 ? ""
@@ -140,7 +140,11 @@ if (!class_exists("Toplevel_Navbar")) {
                 $chatbot_trigger_hide_class .
                 '">';
             $navbar_chatbot_trigger .=
-                '<img src="' .
+                '<img class="dw__navbar_chatbot_trigger_image_desktop" src="' .
+                get_stylesheet_directory_uri() .
+                '/assets/images/chatbot-icon-2.svg" alt="chatbot"/>';
+            $navbar_chatbot_trigger .=
+                '<img class="dw__navbar_chatbot_trigger_image_mobile" src="' .
                 get_stylesheet_directory_uri() .
                 '/assets/images/chatbot-icon.svg" alt="chatbot"/>';
             $navbar_chatbot_trigger .= "</button>";
@@ -177,7 +181,7 @@ if (!class_exists("Toplevel_Navbar")) {
                     str_replace(
                         ["/", ".", "https://", "https:", "www"],
                         "",
-                        $navigation_link["url"]
+                        $navigation_link["url"],
                     )
                 ) {
                     $activ_item_style =

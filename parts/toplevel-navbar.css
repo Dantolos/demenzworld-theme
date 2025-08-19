@@ -89,6 +89,9 @@
 }
 
 .dw__navbar_chatbot_trigger {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
     padding: 0px;
     display: flex;
     background-color: unset;
@@ -99,6 +102,14 @@
     transition: all 200ms ease-out;
     transition-delay: 10ms;
 }
+
+.dw__navbar_chatbot_trigger_image_mobile {
+    display: none;
+}
+.dw__navbar_chatbot_trigger_image_desktop {
+    display: block;
+}
+
 .dw__navbar_chatbot_trigger img {
     max-height: 100%;
     transition: inherit;
@@ -399,7 +410,14 @@
         display: none;
     }
     .dw__navbar_chatbot_trigger {
+        position: unset;
         margin-top: -40px;
+    }
+    .dw__navbar_chatbot_trigger_image_mobile {
+        display: block;
+    }
+    .dw__navbar_chatbot_trigger_image_desktop {
+        display: none;
     }
 
     .dw__navbar_donation_trigger {
