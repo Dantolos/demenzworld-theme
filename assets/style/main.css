@@ -19,7 +19,7 @@ a {
 
 .dw__page_wrapper {
     display: flex;
-    top: 40px;
+    top: 0px;
     min-width: 90%;
     min-height: 100vh;
     position: relative;
@@ -51,7 +51,7 @@ a {
     align-items: center;
     padding: 80px 0 0 0;
     justify-content: center;
-    height: 45vh;
+    height: 65vh;
 }
 .dw__hero_left_col {
     width: 30%;
@@ -65,10 +65,13 @@ a {
     color: #db007e;
 }
 .dw__hero_right_col {
-    width: 60%;
-    max-width: 760px;
-    height: 55vh;
+    width: 100%;
+    /*max-width: unset;*/
+    height: 65vh;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media screen and (max-width: 1200px) {
     .dw__section_hero_wrapper {

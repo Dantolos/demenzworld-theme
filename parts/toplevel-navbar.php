@@ -292,7 +292,8 @@ if (!class_exists("Toplevel_Navbar")) {
             $navbar_chatbot_lightbox .=
                 '<div class="dw__chatbot_lightbox_chatbot">';
             $navbar_chatbot_lightbox .=
-                '<iframe style="height:100%;width:100%" frameBorder="0" src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=8bc27af1-2037-4c5c-974f-a0a094af3250&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2Fe43c27a8-216b-49a7-8ced-cc6252359374%2Fconnect"></iframe>';
+                // '<iframe style="height:100%;width:100%" frameBorder="0" src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=8bc27af1-2037-4c5c-974f-a0a094af3250&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2Fe43c27a8-216b-49a7-8ced-cc6252359374%2Fconnect"></iframe>';
+                '<iframe style="height:100%;width:100%" frameBorder="0" src="https://sophie.demenzworld.com/chat/iframe"></iframe>';
             $navbar_chatbot_lightbox .= "</div>";
             $navbar_chatbot_lightbox .= "</div>";
             $navbar_chatbot_lightbox .= "</div>";
@@ -348,6 +349,15 @@ if (!class_exists("Toplevel_Navbar")) {
                 $this->donation_link_spende .
                 '" target="_blank"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
             $navbar_burger_lightbox .= "Einmalige Spende";
+            $navbar_burger_lightbox .= "</a>";
+            $navbar_burger_lightbox .= "</li>";
+            $navbar_burger_lightbox .= "</li>";
+            $navbar_burger_lightbox .= '<li class="dw__burger_dropdown_item">';
+            $navbar_burger_lightbox .=
+                '<a class="nav-link dropdown-toggle" href="' .
+                $this->donation_link_trauerspende .
+                '" target="_blank" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+            $navbar_burger_lightbox .= "Trauerspende";
             $navbar_burger_lightbox .= "</a>";
             $navbar_burger_lightbox .= "</li>";
             $navbar_burger_lightbox .= "</ul>";

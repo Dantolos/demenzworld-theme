@@ -242,11 +242,12 @@
     opacity: 0;
     transition: all 200ms ease-in-out;
 }
+
 .dw__chatbot_lightbox {
-    width: 70%;
-    max-width: 760px;
-    height: 80%;
-    background-color: #fff;
+    width: 90%;
+    max-width: 1240px;
+    height: 90%;
+    /*background-color: #fff;*/
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -258,6 +259,15 @@
     box-shadow: -28px 30px 147px 6px rgba(18, 9, 36, 0.4);
     -webkit-box-shadow: -28px 30px 147px 6px rgba(18, 9, 36, 0.4);
     -moz-box-shadow: -28px 30px 147px 6px rgba(18, 9, 36, 0.4);
+
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.6) 10%,
+        rgba(255, 255, 255, 0.9) 50%,
+        rgba(255, 255, 255, 1) 60%,
+        rgba(255, 255, 255, 0.7) 90%
+    );
+    backdrop-filter: blur(30px) brightness(1) saturate(1);
 }
 .dw__chatbot_lightbox_chatbot {
     position: absolute;

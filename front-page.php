@@ -12,16 +12,21 @@ get_header();
 
           <!-- HERO -->
           <section class="dw__section_hero_wrapper">
-               <div class="dw__hero_left_col">
-                    <h2>Unser Chatbot beantwortet deine Fragen – basierend auf dem Expertenwissen der demenzworld.</h2>
-               </div>
-               <div class="dw__hero_right_col">
-                    <div class="dw__loading_dots" style="position:absolute; top:0; left:0; bottom:0; right:0; margin:auto;z-index:-5;"></div>
-                    <?php if (true) { ?>
-                        <iframe style="height:100%;width:100%;position:absolute;" frameBorder="0" src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=8bc27af1-2037-4c5c-974f-a0a094af3250&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2Fe43c27a8-216b-49a7-8ced-cc6252359374%2Fconnect"></iframe>
-                    <?php } else { ?>
-                        <?php echo do_shortcode("[chatbot]"); ?>
-                    <?php } ?>
+              <!-- --
+              <div class="dw__hero_left_col">
+                   <h2>Unser Chatbot beantwortet deine Fragen – basierend auf dem Expertenwissen der demenzworld.</h2>
+              </div>
+              -->
+               <div class="dw__hero_right_col " >
+                    <!--
+                    Loading Animation
+                    <div class="dw__loading_dots" style="position:absolute; top:0; left:0; bottom:0; right:0; margin:auto;z-index:-5;"></div>-->
+
+                    <!--
+                    Botsonic iFrame
+                    <iframe style="height:100%;width:100%;position:absolute;" frameBorder="0" src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=8bc27af1-2037-4c5c-974f-a0a094af3250&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2Fe43c27a8-216b-49a7-8ced-cc6252359374%2Fconnect"></iframe>-->
+
+                    <iframe style="height:100%;width:100%;position:absolute;max-width:1280px;" frameBorder="0" src="https://sophie.demenzworld.com/chat/iframe"></iframe>
 
                </div>
           </section>
@@ -211,7 +216,10 @@ get_header();
                         </div>
 
 
-                        <button onclick="window.location.href=\''.$this->donation_link_spende.'\';" class="dw_setion_testimonial_sdonation_button"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/elements/heart.svg" width="25px" height="25px">Jetzt Spenden</button>
+                        <button onclick="window.location.href='<?php echo get_field(
+                            "donation_link_spende",
+                            "options",
+                        ); ?>';" class="dw_setion_testimonial_sdonation_button"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/elements/heart.svg" width="25px" height="25px">Jetzt Spenden</button>
                     </div>
 
                 </div>
