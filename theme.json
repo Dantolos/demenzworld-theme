@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "version": 2,
+  "version": 3,
   "settings": {
     "appearanceTools": true,
     "typography": {
@@ -35,10 +35,11 @@
           "fontFace": [
             {
               "fontFamily": "Herbit",
-              "fontWeight": "300 800",
-              "fontStyle": "semibold",
+              "fontWeight": "600",
+              "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/herbit-semibold.woff2"]
+              "src": ["file:./assets/fonts/herbit-semibold.woff2"],
+              "fontDisplay": "swap"
             }
           ]
         },
@@ -50,24 +51,26 @@
             {
               "fontFamily": "Source Sans Pro",
               "fontWeight": "200",
-              "fontStyle": "light",
+              "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/source-sans-pro-Light.woff2"]
+              "src": ["file:./assets/fonts/source-sans-pro-Light.woff2"],
+              "fontDisplay": "swap"
             },
             {
               "fontFamily": "Source Sans Pro",
               "fontWeight": "300",
               "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/source-sans-pro-Regular.woff2"]
+              "src": ["file:./assets/fonts/source-sans-pro-Regular.woff2"],
+              "fontDisplay": "swap"
             },
-
             {
               "fontFamily": "Source Sans Pro",
-              "fontWeight": "700 800",
-              "fontStyle": "bold",
+              "fontWeight": "700",
+              "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/source-sans-pro-Bold.woff2"]
+              "src": ["file:./assets/fonts/source-sans-pro-Bold.woff2"],
+              "fontDisplay": "swap"
             }
           ]
         }
@@ -83,14 +86,14 @@
       "radius": "20px"
     },
     "typography": {
-      "fontFamily": "Source Sans Pro",
+      "fontFamily": "var(--wp--preset--font-family--secondary)",
       "fontWeight": "300",
       "fontSize": "20px"
     },
     "elements": {
       "button": {
         "typography": {
-          "fontFamily": "Herbit"
+          "fontFamily": "var(--wp--preset--font-family--primary)"
         },
         "color": {
           "text": "#ffffff",
@@ -107,10 +110,9 @@
       },
       "heading": {
         "typography": {
-          "fontFamily": "Herbit"
+          "fontFamily": "var(--wp--preset--font-family--primary)"
         }
       }
     }
-  },
-  "patterns": []
+  }
 }
