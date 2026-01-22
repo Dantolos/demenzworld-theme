@@ -295,6 +295,37 @@ get_header();
                     }
                     ?>
                 </div>
+               <div class="dw__section_white_wrapper_inner dw__supporter_grid_section">
+
+                    <h2 style="padding:0 2%; width:90%; text-align:center;">Unsere Medienpartner</h2>
+                    <div class="dw__supporter_grid" style="">
+                    <?php
+                    $partners = get_field("medienpartner");
+                    if (is_array($partners)) {
+                        foreach ($partners as $partner) {
+                            $partner_link = $partner["link"]; ?>
+
+
+                        <div class="dw__supporter_logo" >
+                            <?php if ($partner_link) {
+                                echo '<a href="' .
+                                    $partner_link .
+                                    '" target="_blank">';
+                            } ?>
+                                <img src="<?php echo $partner[
+                                    "logo"
+                                ]; ?>" alt="<?php echo $partner[
+    "name"
+]; ?>"  title="<?php echo $partner["name"]; ?>" width="100%">
+                                <?php if ($partner_link) {
+                                    echo "</a>";
+                                } ?>
+                        </div>
+                    <?php
+                        }
+                    }
+                    ?>
+                </div>
 
           </section>
 

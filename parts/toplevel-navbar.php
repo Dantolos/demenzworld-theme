@@ -14,6 +14,7 @@ if (!class_exists("Toplevel_Navbar")) {
         public $donation_link_goenner;
         public $donation_link_spende;
         public $donation_link_trauerspende;
+        public $donation_link_legate;
 
         public $style_sheet;
         private $js_script;
@@ -52,6 +53,8 @@ if (!class_exists("Toplevel_Navbar")) {
                 get_field("donation_link_spende", "options") ?: "#";
             $this->donation_link_trauerspende =
                 get_field("donation_link_trauerspende", "options") ?: "#";
+            $this->donation_link_legate =
+                get_field("donation_link_legate", "options") ?: "#";
         }
 
         public function render()
