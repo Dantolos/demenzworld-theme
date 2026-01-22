@@ -62,6 +62,24 @@ add_action("acf/include_fields", function () {
                 "allow_in_bindings" => 0,
                 "placeholder" => "",
             ],
+            [
+                "key" => "field_67053zu89f548",
+                "label" => "Donation Link Legate",
+                "name" => "donation_link_legate",
+                "aria-label" => "",
+                "type" => "url",
+                "instructions" => "",
+                "required" => 0,
+                "conditional_logic" => 0,
+                "wrapper" => [
+                    "width" => "",
+                    "class" => "",
+                    "id" => "",
+                ],
+                "default_value" => "",
+                "allow_in_bindings" => 0,
+                "placeholder" => "",
+            ],
         ],
         "location" => [
             [

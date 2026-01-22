@@ -3,6 +3,28 @@
   "version": 3,
   "settings": {
     "appearanceTools": true,
+    "color": {
+      "palette": [
+        {
+          "name": "Primary",
+          "slug": "primary",
+          "color": "#170056"
+        },
+        {
+          "name": "Accent",
+          "slug": "accent",
+          "color": "#db007e"
+        },
+        {
+          "name": "Background",
+          "slug": "background",
+          "color": "#ffffff"
+        }
+      ]
+    },
+    "border": {
+      "radius": true
+    },
     "typography": {
       "fluid": false,
       "fontSizes": [
@@ -38,7 +60,10 @@
               "fontWeight": "600",
               "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/herbit-semibold.woff2"],
+              "src": [
+                "file:./assets/fonts/herbit-semibold.woff2",
+                "file:./assets/fonts/herbit-semibold.woff"
+              ],
               "fontDisplay": "swap"
             }
           ]
@@ -53,7 +78,10 @@
               "fontWeight": "200",
               "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/source-sans-pro-Light.woff2"],
+              "src": [
+                "file:./assets/fonts/source-sans-pro-Light.woff2",
+                "file:./assets/fonts/source-sans-pro-Light.woff"
+              ],
               "fontDisplay": "swap"
             },
             {
@@ -61,7 +89,10 @@
               "fontWeight": "300",
               "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/source-sans-pro-Regular.woff2"],
+              "src": [
+                "file:./assets/fonts/source-sans-pro-Regular.woff2",
+                "file:./assets/fonts/source-sans-pro-Regular.woff"
+              ],
               "fontDisplay": "swap"
             },
             {
@@ -69,7 +100,10 @@
               "fontWeight": "700",
               "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/source-sans-pro-Bold.woff2"],
+              "src": [
+                "file:./assets/fonts/source-sans-pro-Bold.woff2",
+                "file:./assets/fonts/source-sans-pro-Bold.woff"
+              ],
               "fontDisplay": "swap"
             }
           ]
@@ -86,14 +120,14 @@
       "radius": "20px"
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--secondary)",
+      "fontFamily": "Source Sans Pro",
       "fontWeight": "300",
       "fontSize": "20px"
     },
     "elements": {
       "button": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--primary)"
+          "fontFamily": "Herbit"
         },
         "color": {
           "text": "#ffffff",
@@ -110,7 +144,12 @@
       },
       "heading": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--primary)"
+          "fontFamily": "Herbit"
+        }
+      },
+      "form": {
+        "typography": {
+          "fontFamily": "Source Sans Pro"
         }
       }
     }

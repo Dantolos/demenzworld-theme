@@ -239,6 +239,14 @@ if (!class_exists("Toplevel_Navbar")) {
             $navbar_navigation .= "Trauerspende";
             $navbar_navigation .= "</a>";
             $navbar_navigation .= "</li>";
+            $navbar_navigation .= '<li class="dw__navbar_dropdown_item">';
+            $navbar_navigation .=
+                '<a class="nav-link dropdown-toggle" href="' .
+                $this->donation_link_legate .
+                '" target="_blank" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+            $navbar_navigation .= "Legate";
+            $navbar_navigation .= "</a>";
+            $navbar_navigation .= "</li>";
             $navbar_navigation .= "</ul>";
             $navbar_navigation .= "</li>";
             $navbar_navigation .= "</ul>";

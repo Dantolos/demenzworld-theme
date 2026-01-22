@@ -1,3 +1,18 @@
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Herbit", sans-serif;
+}
+
 html {
     margin: 0 !important;
 }
