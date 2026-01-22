@@ -5,11 +5,11 @@ add_action("acf/include_fields", function () {
     }
 
     acf_add_local_field_group([
-        "key" => "group_68483c9b755a5",
+        "key" => "group_69723ba461c0e",
         "title" => "Home | Medienpartner",
         "fields" => [
             [
-                "key" => "field_56463c9b6755f",
+                "key" => "field_69723ba462e4a",
                 "label" => "Medienpartner",
                 "name" => "medienpartner",
                 "aria-label" => "",
@@ -31,7 +31,7 @@ add_action("acf/include_fields", function () {
                 "rows_per_page" => 20,
                 "sub_fields" => [
                     [
-                        "key" => "field_68483c9b0987b",
+                        "key" => "field_69723ba463c34",
                         "label" => "Logo",
                         "name" => "logo",
                         "aria-label" => "",
@@ -55,10 +55,10 @@ add_action("acf/include_fields", function () {
                         "mime_types" => "",
                         "allow_in_bindings" => 0,
                         "preview_size" => "medium",
-                        "parent_repeater" => "field_56463c9b6755f",
+                        "parent_repeater" => "field_69723ba462e4a",
                     ],
                     [
-                        "key" => "field_68483c9b12232",
+                        "key" => "field_69723ba463c3e",
                         "label" => "Name",
                         "name" => "name",
                         "aria-label" => "",
@@ -77,10 +77,10 @@ add_action("acf/include_fields", function () {
                         "placeholder" => "",
                         "prepend" => "",
                         "append" => "",
-                        "parent_repeater" => "field_56463c9b6755f",
+                        "parent_repeater" => "field_69723ba462e4a",
                     ],
                     [
-                        "key" => "field_68483c9b34456",
+                        "key" => "field_69723ba463c42",
                         "label" => "Link",
                         "name" => "link",
                         "aria-label" => "",
@@ -96,7 +96,7 @@ add_action("acf/include_fields", function () {
                         "default_value" => "",
                         "allow_in_bindings" => 0,
                         "placeholder" => "",
-                        "parent_repeater" => "field_56463c9b6755f",
+                        "parent_repeater" => "field_69723ba462e4a",
                     ],
                 ],
             ],
@@ -104,13 +104,13 @@ add_action("acf/include_fields", function () {
         "location" => [
             [
                 [
-                    "param" => "page_type",
+                    "param" => "post_type",
                     "operator" => "==",
-                    "value" => "front_page",
+                    "value" => "post",
                 ],
             ],
         ],
-        "menu_order" => 1,
+        "menu_order" => 0,
         "position" => "normal",
         "style" => "default",
         "label_placement" => "top",
@@ -119,5 +119,6 @@ add_action("acf/include_fields", function () {
         "active" => true,
         "description" => "",
         "show_in_rest" => 0,
+        "display_title" => "",
     ]);
 });
