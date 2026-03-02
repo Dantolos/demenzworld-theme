@@ -80,6 +80,24 @@ add_action("acf/include_fields", function () {
                 "allow_in_bindings" => 0,
                 "placeholder" => "",
             ],
+            [
+                "key" => "field_69a55ca6bbf8c",
+                "label" => "Donation Link Crowdfunding",
+                "name" => "donation_link_crowdfunding",
+                "aria-label" => "",
+                "type" => "url",
+                "instructions" => "",
+                "required" => 0,
+                "conditional_logic" => 0,
+                "wrapper" => [
+                    "width" => "",
+                    "class" => "",
+                    "id" => "",
+                ],
+                "default_value" => "",
+                "allow_in_bindings" => 0,
+                "placeholder" => "",
+            ],
         ],
         "location" => [
             [

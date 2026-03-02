@@ -55,6 +55,8 @@ if (!class_exists("Toplevel_Navbar")) {
                 get_field("donation_link_trauerspende", "options") ?: "#";
             $this->donation_link_legate =
                 get_field("donation_link_legate", "options") ?: "#";
+            $this->donation_link_crowdfunding =
+                get_field("donation_link_crowdfunding", "options") ?: false;
         }
 
         public function render()
@@ -250,6 +252,17 @@ if (!class_exists("Toplevel_Navbar")) {
             $navbar_navigation .= "Legate";
             $navbar_navigation .= "</a>";
             $navbar_navigation .= "</li>";
+
+            if ($this->donation_link_crowdfunding) {
+                $navbar_navigation .= '<li class="dw__navbar_dropdown_item">';
+                $navbar_navigation .=
+                    '<a class="nav-link dropdown-toggle" href="' .
+                    $this->donation_link_crowdfunding .
+                    '" target="_blank" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+                $navbar_navigation .= "Crowdfunding";
+                $navbar_navigation .= "</a>";
+                $navbar_navigation .= "</li>";
+            }
             $navbar_navigation .= "</ul>";
             $navbar_navigation .= "</li>";
             $navbar_navigation .= "</ul>";

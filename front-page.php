@@ -28,6 +28,12 @@ get_header();
 
                     <iframe style="height:100%;width:100%;position:absolute;max-width:1280px;" frameBorder="0" src="https://sophie.demenzworld.com/chat/iframe"></iframe>
 
+
+               </div>
+               <div class="dw__crowdfounding">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/elements/crowdfounding-icon.svg" />
+                   <p  style="font-size:2rem;">Demenz braucht Gemeinschaft</p>
+                   <a href="https://wemakeit.com/projects/demenz-braucht-gemeinschaft" target="_blank" ><div class="dw__crowdfounding_button">Unser Crowdfunding</div></a>
                </div>
           </section>
           <!-- END HERO -->

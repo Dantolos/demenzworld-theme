@@ -66,7 +66,7 @@ a {
     align-items: center;
     padding: 80px 0 0 0;
     justify-content: center;
-    height: 65vh;
+    min-height: 65vh;
 }
 .dw__hero_left_col {
     width: 30%;
@@ -88,11 +88,44 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+.dw__crowdfounding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Herbit;
+    color: #170056;
+    margin: 0 10px;
+}
+.dw__crowdfounding img {
+    width: 150px;
+}
+.dw__crowdfounding p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.dw__crowdfounding_button {
+    background-color: #db007e;
+    color: white;
+    border-radius: 20px;
+    padding: 2px 16px;
+    font-family: Herbit;
+    font-size: 1.6rem;
+    transition: all 200ms ease;
+    text-align: center;
+}
+
+.dw__crowdfounding_button:hover {
+    transform: scale(1.1);
+}
+
 @media screen and (max-width: 1200px) {
     .dw__section_hero_wrapper {
         padding: 40px 0;
         gap: 1%;
-        height: 55vh;
+        min-height: 55vh;
     }
     .dw__hero_left_col,
     .dw__hero_right_col {

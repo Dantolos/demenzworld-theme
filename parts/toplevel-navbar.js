@@ -26,7 +26,7 @@ var ClosedInputfield = false;
 
 document.addEventListener("scroll", (windowInfo) => {
   let ScrollOffset = window.scrollY;
-  console.log(ScrollOffset);
+  //console.log(ScrollOffset);
 
   // hide input field by scrolling down in window
   let disapearThreshold = 60;
@@ -43,9 +43,11 @@ document.addEventListener("scroll", (windowInfo) => {
 });
 
 const disapearInputField = (definitiveCloseInput = false) => {
-  document
-    .querySelector(".dw__chatbot_input_wrapper")
-    .classList.add("dw__chatbot_input_wrapper_closed");
+  const chatbotInput = document.querySelector(".dw__chatbot_input_wrapper");
+  if (!chatbotInput) {
+    return;
+  }
+  chatbotInput.classList.add("dw__chatbot_input_wrapper_closed");
   setTimeout(() => {
     document
       .querySelector(".dw__navbar_chatbot_trigger")
