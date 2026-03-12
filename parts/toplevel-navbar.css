@@ -90,8 +90,8 @@
 
 .dw__navbar_chatbot_trigger {
     position: fixed;
-    bottom: 20px;
-    right: 40px;
+    bottom: 60px;
+    right: 30px;
     padding: 0px;
     display: flex;
     background-color: unset;

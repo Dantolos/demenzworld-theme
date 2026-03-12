@@ -168,3 +168,15 @@ function disable_comments_admin_bar()
     }
 }
 add_action("init", "disable_comments_admin_bar");
+
+/*-------------------------------------------------------------*/
+/*--------------------- Block Support -------------------------*/
+/*-------------------------------------------------------------*/
+function custom_theme_setup()
+{
+    add_theme_support("wp-block-styles");
+    add_theme_support("align-wide");
+    add_theme_support("editor-styles");
+    add_theme_support("responsive-embeds");
+}
+add_action("after_setup_theme", "custom_theme_setup");
