@@ -30,11 +30,11 @@ get_header();
 
 
                </div>
-               <div class="dw__crowdfounding">
+               <!--<div class="dw__crowdfounding">
                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/elements/crowdfounding-icon.svg" />
                    <p  style="font-size:2rem;">Demenz braucht Gemeinschaft</p>
                    <a href="https://wemakeit.com/projects/demenz-braucht-gemeinschaft" target="_blank" ><div class="dw__crowdfounding_button">Unser Crowdfunding</div></a>
-               </div>
+               </div>-->
           </section>
           <!-- END HERO -->
 
